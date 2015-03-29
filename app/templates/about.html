@@ -21,6 +21,39 @@
 	</p>
       </div>
     </div>
+
+    <div id="carousel-b" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+	<li data-target="#carousel-b" data-slide-to="0" class="active"></li>
+	<li data-target="#carousel-b" data-slide-to="1"></li>
+	<li data-target="#carousel-b" data-slide-to="2"></li>
+	<li data-target="#carousel-b" data-slide-to="3"></li>
+      </ol>
+      <center>
+      <div class="carousel-inner">
+	<div class="item active">
+	  <img src="{{static('img/me0.jpg')}}">
+	</div>
+	<div class="item">
+	  <img src="{{static('img/me1.jpg')}}">
+	</div>
+	<div class="item">
+	  <img src="{{static('img/me2.jpg')}}">
+	</div>
+	<div class="item">
+	  <img src="{{static('img/me3.jpg')}}">
+	</div>
+      </div>
+      </center>
+      
+      <a class="left carousel-control" href="#carousel-b" data-slide="prev">
+	<span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#carousel-b" data-slide="next">
+	<span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+    
   </div>
 </div>
 {% endblock %}

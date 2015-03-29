@@ -5,14 +5,83 @@
   <div class="container-fluid">  
     <div class="jumbotron container-fluid" style="background-color:#F2F1EF">
       <div class="jumbotron-contents">
-	<h1>Eli Hickox's Homepage - eli@hicko.xyz</h1>
+	<center>
+	<h3>Eli Hickox's Homepage</h3>
 	<h2>Software Engineer | Urbana Illinois & San Francisco Bay Area</h2>
 	<p>Here you can find various links pertaining to Eli Hickox.</p>
-      </div>
-      <div class="jumbotron-photo">
-	<img src="{{ static('img/home.jpg') }}">
+	<p>Check out a sample of my photography below.</p>
+	<p>Photographs and Website ©2015, Eli Hickox</p>
+	</center>
       </div>
     </div>
   </div>
+</div>
+<div class="container-fluid">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6">
+      <div id="carousel-a" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+	  <li data-target="#carousel-a" data-slide-to="0" class="active"></li>
+	  <li data-target="#carousel-a" data-slide-to="1"></li>
+	  <li data-target="#carousel-a" data-slide-to="2"></li>
+	</ol>
+	<center>
+	<div class="carousel-inner">
+	  <div class="item active">
+	    <img src="{{static('img/home0.jpg')}}">
+	  </div>
+	  <div class="item">
+	    <img src="{{static('img/home1.jpg')}}">
+	  </div>
+	  <div class="item">
+	    <img src="{{static('img/home2.jpg')}}">
+	  </div>
+	</div>
+	</center>
+
+	<a class="left carousel-control" href="#carousel-a" data-slide="prev">
+	  <span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#carousel-a" data-slide="next">
+	  <span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+      </div>
+      
+    </div>
+    
+    <div class="col-xs-6">
+      <div id="carousel-b" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+	  <li data-target="#carousel-b" data-slide-to="0" class="active"></li>
+	  <li data-target="#carousel-b" data-slide-to="1"></li>
+	  <li data-target="#carousel-b" data-slide-to="2"></li>
+	</ol>
+	
+	<center>
+	<div class="carousel-inner">
+	  <div class="item active">
+	    <img src="{{static('img/home3.jpg')}}">
+	  </div>
+	  <div class="item">
+	    <img src="{{static('img/home4.jpg')}}">
+	  </div>
+	  <div class="item">
+	    <img src="{{static('img/home5.jpg')}}">
+	  </div>
+	</div>
+	</center>
+
+	<a class="left carousel-control" href="#carousel-b" data-slide="prev">
+	  <span class="glyphicon glyphicon-chevron-left"></span>
+	</a>
+	<a class="right carousel-control" href="#carousel-b" data-slide="next">
+	  <span class="glyphicon glyphicon-chevron-right"></span>
+	</a>
+      </div>
+    </div>
+    
+  </div>
+</div>
 </div>
 {% endblock %}

@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+    
     <link rel="stylesheet" href="{{ static('css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ static('css/bootflat.css') }}">
     <link rel="stylesheet" href="{{ static('css/main.css') }}">
@@ -24,44 +24,56 @@
 
     <!-- Begin Navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">	
-	<ul class="nav navbar-nav">
-	  <li>
-	    <a href="{{ url_for('index') }}">HOME</a>
-	  </li>
-	  <li>
-	    <a href="{{ url_for('about') }}">ABOUT</a>
-	  </li>
-	  <li>
-	    <a href="{{ url_for('projects') }}">PROJECTS</a>
-	  </li>
-	  <li>
-	    <a href="https://github.com/ehickox2012">GITHUB</a>
-	  </li>
-	  <li>
-	    <a href="http://liquidchickenman.blogspot.com">BLOG</a>
-	  </li>
-	  <li>
-	    <a href="https://www.flickr.com/photos/64654711@N08/">FLICKR</a>
-	  </li>
-	  <li class="dropdown">
-	    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-	      SOCIAL 
-	      <b class="caret"></b>
-	    </a>
-	    <ul class="dropdown-menu" role="menu">
-	      <li>
-		<a href="https://www.facebook.com/ehickox2012">Facebook</a>
-	      </li>
-	      <li>
-		<a href="https://twitter.com/elihickox">Twitter</a>
-	      </li>
-	      <li>
-		<a href="http://www.linkedin.com/in/elihickox">LinkedIn</a>
-	      </li>
-	    </ul>
-	  </li>
-	</ul>
+      <div class="container-fluid">
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand">eli@hicko.xyz</a>
+	</div>
+
+	<div class="collapse navbar-collapse" id="mynav">  
+	  <ul class="nav navbar-nav">
+	    <li>
+	      <a href="{{ url_for('index') }}">HOME</a>
+	    </li>
+	    <li>
+	      <a href="{{ url_for('about') }}">ABOUT</a>
+	    </li>
+	    <li>
+	      <a href="{{ url_for('projects') }}">PROJECTS</a>
+	    </li>
+	    <li>
+	      <a href="https://github.com/ehickox2012">GITHUB</a>
+	    </li>
+	    <li>
+	      <a href="http://liquidchickenman.blogspot.com">BLOG</a>
+	    </li>
+	    <li>
+	      <a href="https://www.flickr.com/photos/64654711@N08/">FLICKR</a>
+	    </li>
+	    <li class="dropdown">
+	      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		SOCIAL 
+		<b class="caret"></b>
+	      </a>
+	      <ul class="dropdown-menu" role="menu">
+		<li>
+		  <a href="https://www.facebook.com/ehickox2012">Facebook</a>
+		</li>
+		<li>
+		  <a href="https://twitter.com/elihickox">Twitter</a>
+		</li>
+		<li>
+		  <a href="http://www.linkedin.com/in/elihickox">LinkedIn</a>
+		</li>
+	      </ul>
+	    </li>
+	  </ul>
+	</div>
       </div>
     </nav>
     <!-- End Navbar -->
@@ -95,6 +107,8 @@
     <script src="{{ static('js/vendors/bootstrap/bootstrap-scrollspy.js') }}"></script>
     <script src="{{ static('js/vendors/bootstrap/bootstrap-collapse.js') }}"></script>
     <script src="{{ static('js/vendors/bootstrap/bootstrap-tab.js') }}"></script>
+
+    <script src="{{ static('js/bootstrap.js') }}"></script>
 
     <script src="{{ static('js/icheck.min.js') }}"></script>
     <script src="{{ static('js/jquery.fs.selecter.min.js') }}"></script>
