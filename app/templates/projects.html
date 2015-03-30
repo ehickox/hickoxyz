@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
+{% if projects == None %}
 <div class="container-fluid">
   <div class="container-fluid">
     <div class="jumbotron container-fluid" style="background-color:#F2F1EF">
@@ -11,4 +12,37 @@
     </div>
   </div>
 </div>
+{% else %}
+<!-- Begin Project Panel -->
+{% for project in projects %}
+<a href={{"#"+project.title}}></a>
+<a name={{project.title}}></a>
+<div class="container-fluid">
+  <div class="container">
+  <div class="panel panel-default" style="background-color:#F2F1EF">
+    <div class="panel-heading" style="background-color:#D2D7D3">
+      <h3 class="panel-title"><center>{{project.title+" - "+project.tagline}}</center></h3>
+    </div>
+    <div class="panel-body" style="background-color:#F2F1EF">
+      <div class="container-fluid">
+	<p>{{project.date}}</p>
+	<p>{{project.description|safe}}</p>
+	{% if project.link %}
+	<p><a href={{project.link}}>Go to {{project.title}}</a></p>
+	{% endif %}
+	{% if project.download %}
+	<p><a href={{project.download}}>Download {{project.title}}</a></p>
+	{% endif %}
+	{% if project.github %}
+	<p>{{project.title}} <a href={{project.github}}> is on GitHub</a>. Pull requests and bug reports are welcome.</p>
+	{% endif %}
+	<p>© {{project.copywrite}}</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+{% endfor %}
+<!-- End Project Panel -->
+{% endif %}
 {% endblock %}

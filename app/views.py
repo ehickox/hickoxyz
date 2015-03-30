@@ -1,5 +1,6 @@
 from flask import render_template
-from app import app 
+from app import app
+import controller
 
 @app.route('/')
 def index():
@@ -11,4 +12,5 @@ def about():
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    projects_list = controller.get_projects()
+    return render_template('projects.html', projects=projects_list)
