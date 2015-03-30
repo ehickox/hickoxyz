@@ -7,7 +7,7 @@ $(document).ready(function () {
     }, 1000);
 
     window.setTimeout(function () {
-	addAlert("<center><p>Here you can find various links pertaining to Eli Hickox.</p></center>");
+	addAlert("<center><p>For more information, or to download a copy of my résumé, click on ABOUT.</p></center>");
     }, 10000);
 
     window.setTimeout(function () {

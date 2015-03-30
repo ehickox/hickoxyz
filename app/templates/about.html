@@ -13,8 +13,7 @@
 	</p>
 	<p>
 	  This is my personal website which showcases my portfolio of personal projects and provides
-	  links to my profiles on various websites. If you're a recruiter, my LinkedIn is listed
-	  under "SOCIAL".
+	  links to my profiles on various websites.
 	</p>
 	<p>
 	  Apart from software, I enjoy photography, traveling, and blogging in my free time. 
@@ -22,38 +21,69 @@
       </div>
     </div>
 
-    <div id="carousel-b" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-	<li data-target="#carousel-b" data-slide-to="0" class="active"></li>
-	<li data-target="#carousel-b" data-slide-to="1"></li>
-	<li data-target="#carousel-b" data-slide-to="2"></li>
-	<li data-target="#carousel-b" data-slide-to="3"></li>
-      </ol>
-      <center>
-      <div class="carousel-inner">
-	<div class="item active">
-	  <img src="{{static('img/me0.jpg')}}">
-	</div>
-	<div class="item">
-	  <img src="{{static('img/me1.jpg')}}">
-	</div>
-	<div class="item">
-	  <img src="{{static('img/me2.jpg')}}">
-	</div>
-	<div class="item">
-	  <img src="{{static('img/me3.jpg')}}">
+    <div class="row">
+      <div class="col-md-6">
+	<div class="jumbotron container-fluid" style="background-color:#F2F1EF">
+	  <div class="jumbotron-contents">
+	    <center>
+	    <h3>Contact</h3>
+	    <address>
+	      <strong>Eli Hickox</strong><br>
+	      918 W Illinois St<br>
+	      Urbana, IL 61801<br>
+	      <abbr title="Phone">p:</abbr> 217.246.1759<br>
+	      <abbr title="Email">e:</abbr> eli@hicko.xyz<br>
+	    </address>
+	    <form action="https://www.icloud.com/pages/AwBWCAESEOU8CQnJ3M3kFEYvX6Hxqw0aKmQ2Gp-X0T4SqBC\
+fN1c-HZF8Ku8l_awERyo6yGzj3H0b0CRkvwjfRb9htQMCUCAQEEIGJNodczFQ7M68OHsNeDA-C3jjPff-FVEMIKYLrJ9IkT#Eli_\
+Hickox_Resume">
+	      <button type="submit" class="btn btn-default" value="RÉSUMÉ">RÉSUMÉ</button>
+	      <p></p>
+	    </form>
+	    <form action="http://www.linkedin.com/in/elihickox">
+	      <button type="submit" class="btn btn-default" value="LinkedIn">LinkedIn</button>
+	      <p></p>
+	    </form>
+	    
+	    </center>
+	  </div>
 	</div>
       </div>
-      </center>
-      
-      <a class="left carousel-control" href="#carousel-b" data-slide="prev">
-	<span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#carousel-b" data-slide="next">
-	<span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
+
+      <div class="col-md-6">
+	<div id="carousel-b" class="carousel slide" data-ride="carousel">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-b" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-b" data-slide-to="1"></li>
+	    <li data-target="#carousel-b" data-slide-to="2"></li>
+	    <li data-target="#carousel-b" data-slide-to="3"></li>
+	  </ol>
+	  <center>
+	    <div class="carousel-inner">
+	      <div class="item active">
+		<img src="{{static('img/me0.jpg')}}">
+	      </div>
+	      <div class="item">
+		<img src="{{static('img/me1.jpg')}}">
+	      </div>
+	      <div class="item">
+		<img src="{{static('img/me2.jpg')}}">
+	      </div>
+	      <div class="item">
+		<img src="{{static('img/me3.jpg')}}">
+	      </div>
+	    </div>
+	  </center>
+
+	  <a class="left carousel-control" href="#carousel-b" data-slide="prev">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-b" data-slide="next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	  </a>
+	</div>
+      </div>
     </div>
-    
   </div>
 </div>
 {% endblock %}
