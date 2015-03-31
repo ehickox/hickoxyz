@@ -4,6 +4,7 @@ def get_projects():
     projects.append(get_bitraider())
     projects.append(get_vimdeploy())
     projects.append(get_pebble_bitcoin_wallet())
+    projects.append(get_eshcript())
     return projects
 
 def get_bitraider():
@@ -80,4 +81,35 @@ def get_vimdeploy():
     project.append_description(desc)
     project.add_download("https://github.com/ehickox2012/vimdeploy/archive/master.zip")
 
+    return project
+
+def get_eshcript():
+    project = Project(title="eshcript", tagline="An experimental Lisp programming language",
+                      date="April, 2014", github="https://github.com/ehickox2012/eshcript",
+                      download="https://github.com/ehickox2012/eshcript/archive/master.zip")
+
+    desc = ("ESHcript is an (incomplete) interpreted Lisp programming language developed by Eli "
+            "S. Hickox, hence the name 'ESHcript'. This is not intended to be a full-scale, "
+            "production level, programming language. A language is only as good as the library "
+            "that surounds it. This is just a personal pet project that I have been tinkering "
+            "with for a while. I mostly started this project as a way to learn C as well as a "
+            "way to learn how programming languages are constructed.<br>"
+            "<br>"
+            "Makes use of the <a href='https://github.com/orangeduck/mpc'>mpc Parser Combinator "
+            "Library</a> for C.<br>"
+            "<br>"
+            "If you'd like to try out ESHcript, keep in mind, it is Turing Incomplete and "
+            "currently only supports basic arithmetic operations such as add, subtract, multiply, "
+            "divide, min, max, modular arithmetic, and power. Data structures currently supported "
+            "are limited to lists.<br>"
+            "<br>"
+            "To install, click on the download link below, unzip the file, and change directories "
+            "to the unzipped location. Then run:<br>"
+            "<samp>$ cc -std=c99 -Wall prompt.c mpc.c -ledit -lm -o prompt</samp>"
+            "<br>"
+            "Now you should be able to run: <samp>$ ./prompt</samp>. A shell similar to the Python "
+            " Interactive Shell should start.")
+                    
+    project.append_description(desc)
+    project.add_license("MIT")
     return project
