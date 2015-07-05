@@ -3,7 +3,7 @@ $(document).ready(function () {
     addAlert("<center><h1>Software Engineer</h1></center>");
 
     window.setTimeout(function () {
-	addAlert("<center><h1>Urbana, Illinois & San Francisco Bay Area</h1></center>");
+	addAlert("<center><h1>San Francisco Bay Area</h1></center>");
     }, 1000);
 
     window.setTimeout(function () {
