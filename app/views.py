@@ -8,7 +8,8 @@ def index():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    resume = "https://www.icloud.com/pages/AwBWCAESEOU8CQnJ3M3kFEYvX6Hxqw0aKmQ2Gp-X0T4SqBCfN1c-HZF8Ku8l_awERyo6yGzj3H0b0CRkvwjfRb9htQMCUCAQEEIGJNodczFQ7M68OHsNeDA-C3jjPff-FVEMIKYLrJ9IkT#Eli_Hickox_Resume"
+    return render_template('about.html', resume=resume)
 
 @app.route('/projects')
 def projects():
