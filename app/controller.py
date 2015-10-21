@@ -24,6 +24,7 @@ def get_bitscramblr():
     
     bitscramblr.append_description(desc)
     bitscramblr.add_licence("Apache 2")
+    return bitscramblr
 
 def get_bitraider():
     bitraider = Project(title="bitraider", tagline="A Bitcoin Algorithmic Trading Framework",
