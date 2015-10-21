@@ -23,7 +23,7 @@ def get_bitscramblr():
             "found at the GitHub link provided.")
     
     bitscramblr.append_description(desc)
-    bitscramblr.add_licence("Apache 2")
+    bitscramblr.add_license("Apache 2")
     return bitscramblr
 
 def get_bitraider():
