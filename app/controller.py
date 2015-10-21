@@ -1,17 +1,35 @@
 from models import Project
+
 def get_projects():
     projects = []
     projects.append(get_bitraider())
+    projects.append(get_bitscramblr())
     projects.append(get_vimdeploy())
     projects.append(get_pebble_bitcoin_wallet())
     projects.append(get_eshcript())
     return projects
 
+def get_bitscramblr():
+    bitscramblr = Project(title="bitscramblr", tagline="Bitcoin transaction anonymization",
+                          date="April, 2015", github="https://github.com/ehickox/bitscramblr",
+                          link="https://www.academia.edu/16612889/Bitcoin_Transaction_Anonymization_Through_Randomized_Dynamic_Transactions")
+
+    desc = ("Bitscramblr is an application that allows you to send Bitcoin anonymously. "
+            "It differs from many mixing services in existence in that a transaction will "
+            "not be sent until adequately sized inputs are available from another source. "
+            "Basically what this means is: there is no path from a transaction's origin to its destination."
+            "For a more detailed overview of the Graph Theory principles that make Bitscramblr work, "
+            "click on the link below to read my research paper. A proof of concept implementation can be "
+            "found at the GitHub link provided.")
+    
+    bitscramblr.append_description(desc)
+    bitscramblr.add_licence("Apache 2")
+
 def get_bitraider():
     bitraider = Project(title="bitraider", tagline="A Bitcoin Algorithmic Trading Framework",
                         date="May, 2015",
-                        github="https://github.com/ehickox2012/bitraider",
-                        link="http://ehickox2012.github.io/bitraider")
+                        github="https://github.com/ehickox/bitraider",
+                        link="http://ehickox.github.io/bitraider")
     
     desc = ("Bitraider is a collection of tools for algorithmic bitcoin "
            "trading in Python. Bitraider includes an Abstract Exchange "
@@ -32,7 +50,7 @@ def get_pebble_bitcoin_wallet():
     project = Project(title="BitcoinWallet",
                       tagline="A Pebble watch face that displays a Bitcoin address QR code",
                       date="April, 2014",
-                      github="https://github.com/ehickox2012/BitcoinWallet")
+                      github="https://github.com/ehickox/BitcoinWallet")
     
     desc = ("A Pebble watch face that displays an image of your Bitcoin (or other alt coin) "
             "wallet's QR code. Imagine if a friend wanted to send you money... With this app, "
@@ -49,7 +67,7 @@ def get_pebble_bitcoin_wallet():
             "<samp>$ pebble install --phone 'IP ADDRESS OF YOUR PHONE'</samp>")
             
     project.append_description(desc)
-    project.add_download("https://github.com/ehickox2012/BitcoinWallet/archive/master.zip")
+    project.add_download("https://github.com/ehickox/BitcoinWallet/archive/master.zip")
 
     return project
 
@@ -57,7 +75,7 @@ def get_vimdeploy():
     project = Project(title="vimdeploy",
                       tagline="Quickly and easily deploy my favorite Vim configuration",
                       date="February, 2015",
-                      github="https://github.com/ehickox2012/vimdeploy")
+                      github="https://github.com/ehickox/vimdeploy")
 
     desc = ("Vimdeploy is a script that will set you up with my favorite vim configuration "
             "extremely quickly. To install, follow the instructions below:<br>"
@@ -79,14 +97,14 @@ def get_vimdeploy():
             "<samp>$ mv .vimrc ~/.vimrc</samp>")
 
     project.append_description(desc)
-    project.add_download("https://github.com/ehickox2012/vimdeploy/archive/master.zip")
+    project.add_download("https://github.com/ehickox/vimdeploy/archive/master.zip")
 
     return project
 
 def get_eshcript():
     project = Project(title="eshcript", tagline="An experimental Lisp programming language",
-                      date="April, 2014", github="https://github.com/ehickox2012/eshcript",
-                      download="https://github.com/ehickox2012/eshcript/archive/master.zip")
+                      date="April, 2014", github="https://github.com/ehickox/eshcript",
+                      download="https://github.com/ehickox/eshcript/archive/master.zip")
 
     desc = ("ESHcript is an (incomplete) interpreted Lisp programming language developed by Eli "
             "S. Hickox, hence the name 'ESHcript'. This is not intended to be a full-scale, "
