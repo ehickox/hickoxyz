@@ -17,9 +17,9 @@ def get_bitscramblr():
     desc = ("Bitscramblr is an application that allows you to send Bitcoin anonymously. "
             "It differs from many mixing services in existence in that a transaction will "
             "not be sent until adequately sized inputs are available from another source. "
-            "Basically what this means is: there is no path from a transaction's origin to its destination."
+            "Basically what this means is: there is no path from a transaction's origin to its destination. "
             "For a more detailed overview of the Graph Theory principles that make Bitscramblr work, "
-            "click on the link below to read my research paper. A proof of concept implementation can be "
+            "click on 'Go to bitscramblr' to read my research paper. A proof of concept implementation can be "
             "found at the GitHub link provided.")
     
     bitscramblr.append_description(desc)
