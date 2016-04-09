@@ -1,11 +1,30 @@
 from models import Project
+
 def get_projects():
     projects = []
     projects.append(get_bitraider())
+    projects.append(get_bitscramblr())
     projects.append(get_vimdeploy())
     projects.append(get_pebble_bitcoin_wallet())
     projects.append(get_eshcript())
     return projects
+
+def get_bitscramblr():
+    bitscramblr = Project(title="bitscramblr", tagline="Bitcoin transaction anonymization",
+                          date="April, 2015", github="https://github.com/ehickox/bitscramblr",
+                          link="https://www.academia.edu/16612889/Bitcoin_Transaction_Anonymization_Through_Randomized_Dynamic_Transactions")
+
+    desc = ("Bitscramblr is an application that allows you to send Bitcoin anonymously. "
+            "It differs from many mixing services in existence in that a transaction will "
+            "not be sent until adequately sized inputs are available from another source. "
+            "Basically what this means is: there is no path from a transaction's origin to its destination. "
+            "For a more detailed overview of the Graph Theory principles that make Bitscramblr work, "
+            "click on 'Go to bitscramblr' to read my research paper. A proof of concept implementation can be "
+            "found at the GitHub link provided.")
+    
+    bitscramblr.append_description(desc)
+    bitscramblr.add_license("Apache 2")
+    return bitscramblr
 
 def get_bitraider():
     bitraider = Project(title="bitraider", tagline="A Bitcoin Algorithmic Trading Framework",

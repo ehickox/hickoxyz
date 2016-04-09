@@ -9,7 +9,7 @@ class Project():
         self.github = github
         self.link = link
         self.download = download
-        self.copywrite= copywrite
+        self.copywrite = copywrite
 
     def append_description(self, text=""):
         if text != "":
