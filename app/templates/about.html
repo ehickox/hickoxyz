@@ -3,92 +3,100 @@
 {% block body %}
 <div class="container-fluid">
   <div class="container-fluid">
+
+    <!-- Begin about pannel -->
     <div class="jumbotron container-fluid" style="background-color:#E4E5E9">
       <div class="jumbotron-contents">
-	<h3>About</h3>
-	<p>
-	  My name is Eli Hickox. I'm a software engineer based in The San Francisco Bay Area.
-	  I spent three years studying Mathematics and Computer Science at The University of
-	  Illinois at Urbana-Champaign, but then I dropped out to work on the Systems team
-	  at RelateIQ, a Salesforce company. Let's just say I got an offer I couldn't refuse :)
-	</p>
-	<p>
-	  Today, RelateIQ has become SalesforceIQ, and I am the chief backend engineer on the
-	  Salesforce integration for SalesforceIQ Inbox. Some examples of projects I have brought
-	  to life are: geolocation for read receipts, the mobile news feed, and custom object support for
-	  SalesCloud.
-	</p>
-	<p>
-	  This is my personal website which showcases my portfolio of personal projects and provides
-	  links to my profiles on various websites. To see some of my projects, click
-	  on PROJECTS. Note that this is an incomplete list. The pace of software development is
-	  rapid and I don't always have time to update my website. To see a complete collection of
-	  my projects, check out my GitHub.
-	</p>
-	<p>
-	  Apart from software, I'm an avid golfer. I also enjoy photography, traveling, and blogging in my free time. 
-	</p>
+        <h3>About</h3>
+        <p>
+          My name is Eli Hickox. I'm a software engineer based in The San Francisco Bay Area.
+          I spent three years studying Mathematics and Computer Science at The University of
+          Illinois at Urbana-Champaign, but then I dropped out to work on the Systems team
+          at RelateIQ, a Salesforce company. Let's just say I got an offer I couldn't refuse :)
+        </p>
+        <p>
+          Today, RelateIQ has become SalesforceIQ, and I am the chief backend engineer on the
+          Salesforce integration for SalesforceIQ Inbox. Some examples of projects I have brought
+          to life are: geolocation for read receipts, the mobile news feed, and custom object support for
+          SalesCloud.
+        </p>
+        <p>
+          This is my personal website which showcases my portfolio of personal projects and provides
+          links to my profiles on various websites. To see some of my projects, click
+          on PROJECTS. Note that this is an incomplete list. The pace of software development is
+          rapid and I don't always have time to update my website. To see a complete collection of
+          my projects, check out my GitHub.
+        </p>
+        <p>
+          Apart from software, I'm an avid golfer. I also enjoy photography, traveling, and blogging in my free time.
+        </p>
       </div>
     </div>
+    <!-- End about panel -->
 
+    <!-- Begin contact/photo row -->
     <div class="row">
+      <!-- Begin contact column -->
       <div class="col-md-6">
-	<div class="jumbotron container-fluid" style="background-color:#E4E5E9">
-	  <div class="jumbotron-contents">
-	    <center>
-	    <h3>Contact</h3>
-	    <abbr title="Phone">p:</abbr> 217.246.1759<br>
-	    <abbr title="Email">e:</abbr> eli@elihickox.com<br>
-	    <br>
-	    <form action="{{resume}}">
-	      <button type="submit" class="btn btn-default" value="RÉSUMÉ">RÉSUMÉ</button>
-	      <p></p>
-	    </form>
-	    <form action="http://www.linkedin.com/in/elihickox">
-	      <button type="submit" class="btn btn-default" value="LinkedIn">LinkedIn</button>
-	      <p></p>
-	    </form>
-	    
-	    </center>
-	  </div>
-	</div>
+        <div class="jumbotron container-fluid" style="background-color:#E4E5E9">
+          <div class="jumbotron-contents">
+            <center>
+              <h3>Contact</h3>
+              <abbr title="Phone">p:</abbr> 217.246.1759<br>
+              <abbr title="Email">e:</abbr><a href="mailto:eli@elihickox.com"> eli@elihickox.com</a><br>
+              <br>
+              <form action="{{resume}}">
+                <button type="submit" class="btn btn-default" value="RÉSUMÉ">RÉSUMÉ</button>
+                <p></p>
+              </form>
+              <form action="http://www.linkedin.com/in/elihickox">
+                <button type="submit" class="btn btn-default" value="LinkedIn">LinkedIn</button>
+                <p></p>
+              </form>
+            </center>
+          </div>
+        </div>
       </div>
+      <!-- End contact column -->
 
+      <!-- Begin photo column -->
       <div class="col-md-6">
-	<div id="carousel-b" class="carousel slide" data-ride="carousel">
-	  <ol class="carousel-indicators">
-	    <li data-target="#carousel-b" data-slide-to="0" class="active"></li>
-	    <li data-target="#carousel-b" data-slide-to="1"></li>
-	    <li data-target="#carousel-b" data-slide-to="2"></li>
-	    <li data-target="#carousel-b" data-slide-to="3"></li>
-	  </ol>
-	  <center>
-	    <div class="carousel-inner">
-	      <div class="item active">
-		<img src="{{static('img/me0.jpg')}}">
-	      </div>
-	      <div class="item">
-		<img src="{{static('img/me1.jpg')}}">
-	      </div>
-	      <div class="item">
-		<img src="{{static('img/me2.jpg')}}">
-	      </div>
-	      <div class="item">
-		<img src="{{static('img/me3.jpg')}}">
-	      </div>
-	    </div>
-	  </center>
+        <div id="carousel-b" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-b" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-b" data-slide-to="1"></li>
+            <li data-target="#carousel-b" data-slide-to="2"></li>
+            <li data-target="#carousel-b" data-slide-to="3"></li>
+          </ol>
+          <center>
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="{{static('img/me0.jpg')}}">
+              </div>
+              <div class="item">
+                <img src="{{static('img/me1.jpg')}}">
+              </div>
+              <div class="item">
+                <img src="{{static('img/me2.jpg')}}">
+              </div>
+              <div class="item">
+                <img src="{{static('img/me3.jpg')}}">
+              </div>
+            </div>
+          </center>
 
-	  <a class="left carousel-control" href="#carousel-b" data-slide="prev">
-	    <span class="glyphicon glyphicon-chevron-left"></span>
-	  </a>
-	  <a class="right carousel-control" href="#carousel-b" data-slide="next">
-	    <span class="glyphicon glyphicon-chevron-right"></span>
-	  </a>
-	</div>
+          <a class="left carousel-control" href="#carousel-b" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-b" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
       </div>
-      
+      <!-- End photo column -->
     </div>
+    <!-- End contact/photo row -->
+
   </div>
 </div>
 {% endblock %}
