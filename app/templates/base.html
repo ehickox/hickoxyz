@@ -47,6 +47,9 @@
 	      <a href="{{ url_for('about') }}">ABOUT</a>
 	    </li>
 	    <li>
+	      <a href="{{ url_for('stats') }}">STATS</a>
+	    </li>
+	    <li>
 	      <a href="{{ url_for('projects') }}">PROJECTS</a>
 	    </li>
 	    <li>
@@ -80,6 +83,15 @@
       </div>
     </nav>
     <!-- End Navbar -->
+
+    <!--Chartkick-->
+    <script src="{{ static('js/chartkick.js') }}"></script>
+    <!-- To use Google charts uncomment the following 2 lines and delete the previous one
+    <script src="http://www.google.com/jsapi"></script>
+    -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
 
     {% block body %}
     {% endblock %}

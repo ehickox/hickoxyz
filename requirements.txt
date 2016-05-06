@@ -1,2 +1,6 @@
 flask
 gunicorn
+dropbox
+PyGithub
+python-dateutil
+chartkick

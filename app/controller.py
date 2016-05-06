@@ -1,4 +1,61 @@
-from models import Project
+from app.models import Project
+from dropbox.client import DropboxOAuth2FlowNoRedirect, DropboxClient
+import dateutil.parser
+import datetime
+import json
+
+def get_last_years_commits():
+    data = None
+    weekly_totals = []
+    quarterly_totals = []
+    quarterly_avgs = []
+    with open('app/historic_commits.json') as data_file:
+        data = json.load(data_file)
+
+    dates_list = []
+    for datestr in data.keys():
+        if "2011" not in datestr and "2012" not in datestr and "2013" not in datestr:
+            dates_list.append(dateutil.parser.parse(datestr))
+
+    dates_list.sort()
+    quarter_ends = ['03','06','09','12']
+    quarterly_total = 0
+    num_weeks_per_quarter = 0
+    quarter_idx = 0
+    q_num = 1
+    quarter_calculated = {}
+
+    for dat in dates_list:
+        key = str(dat)
+        value = data[key]
+        weekly_totals.append([key, value])
+        quarterly_total += value
+        num_weeks_per_quarter += 1
+        datestr = key.split(' ')[0]
+        year = datestr.split('-')[0]
+        month = datestr.split('-')[1]
+        day = datestr.split('-')[2]
+        if month in quarter_ends and quarter_calculated.get(month+' '+year, False) == False:
+            idx = 'Q'+str(q_num)+' '+year
+            quarterly_totals.append([idx, quarterly_total])
+            quarterly_avgs.append([idx, (float(quarterly_total)/12)])
+            num_weeks_per_quarter = 0
+            quarterly_total = 0
+            quarter_calculated[month+' '+year] = True
+            q_num += 1
+            if q_num > 4:
+                q_num = 1
+
+    one_x = 0
+    for avg in quarterly_avgs:
+        if avg[1] != 0 and one_x == 0:
+            one_x = avg[1]
+
+    exes_list = []
+    for avg in quarterly_avgs:
+        exes_list.append([avg[0], avg[1]/float(one_x)])
+
+    return weekly_totals, quarterly_totals, quarterly_avgs,exes_list
 
 def get_projects():
     projects = []
@@ -21,7 +78,7 @@ def get_bitscramblr():
             "For a more detailed overview of the Graph Theory principles that make Bitscramblr work, "
             "click on 'Go to bitscramblr' to read my research paper. A proof of concept implementation can be "
             "found at the GitHub link provided.")
-    
+
     bitscramblr.append_description(desc)
     bitscramblr.add_license("Apache 2")
     return bitscramblr
@@ -31,7 +88,7 @@ def get_bitraider():
                         date="May, 2015",
                         github="https://github.com/ehickox/bitraider",
                         link="http://ehickox.github.io/bitraider")
-    
+
     desc = ("Bitraider is a collection of tools for algorithmic bitcoin "
            "trading in Python. Bitraider includes an Abstract Exchange "
            "that allows it to be flexible as Bitcoin Exchanges come and go. "
@@ -52,7 +109,7 @@ def get_pebble_bitcoin_wallet():
                       tagline="A Pebble watch face that displays a Bitcoin address QR code",
                       date="April, 2014",
                       github="https://github.com/ehickox/BitcoinWallet")
-    
+
     desc = ("A Pebble watch face that displays an image of your Bitcoin (or other alt coin) "
             "wallet's QR code. Imagine if a friend wanted to send you money... With this app, "
             "all you need to do is switch your watchface and have your friend scan your watch "
@@ -66,7 +123,7 @@ def get_pebble_bitcoin_wallet():
             "<br>"
             "<samp>$ pebble build</samp><br> "
             "<samp>$ pebble install --phone 'IP ADDRESS OF YOUR PHONE'</samp>")
-            
+
     project.append_description(desc)
     project.add_download("https://github.com/ehickox/BitcoinWallet/archive/master.zip")
 
@@ -128,7 +185,7 @@ def get_eshcript():
             "<br>"
             "Now you should be able to run: <samp>$ ./prompt</samp>. A shell similar to the Python "
             " Interactive Shell should start.")
-                    
+
     project.append_description(desc)
     project.add_license("MIT")
     return project
