@@ -19,11 +19,23 @@ def get_last_years_commits():
 
     dates_list.sort()
     quarter_ends = ['03','06','09','12']
+    days_in_year_month = {} # {'2016-01': [5, 8, 9, ...]}
     quarterly_total = 0
     num_weeks_per_quarter = 0
     quarter_idx = 0
     q_num = 1
     quarter_calculated = {}
+    for dat in dates_list:
+        key = str(dat)
+        value = data[key]
+        datestr = key.split(' ')[0]
+        year = datestr.split('-')[0]
+        month = datestr.split('-')[1]
+        day = datestr.split('-')[2]
+        if days_in_year_month.get(year+'-'+month, []) == []:
+            days_in_year_month[year+'-'+month] = [int(day)]
+        else:
+            days_in_year_month.get(year+'-'+month).append(int(day))
 
     for dat in dates_list:
         key = str(dat)
@@ -35,7 +47,8 @@ def get_last_years_commits():
         year = datestr.split('-')[0]
         month = datestr.split('-')[1]
         day = datestr.split('-')[2]
-        if month in quarter_ends and quarter_calculated.get(month+' '+year, False) == False:
+        print(datestr+' '+str(value))
+        if month in quarter_ends and int(day) == max(days_in_year_month.get(year+'-'+month)):
             idx = 'Q'+str(q_num)+' '+year
             quarterly_totals.append([idx, quarterly_total])
             quarterly_avgs.append([idx, (float(quarterly_total)/12)])
