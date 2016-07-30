@@ -47,7 +47,7 @@ def get_last_years_commits():
         year = datestr.split('-')[0]
         month = datestr.split('-')[1]
         day = datestr.split('-')[2]
-        print(datestr+' '+str(value))
+        #print(datestr+' '+str(value))
         if month in quarter_ends and int(day) == max(days_in_year_month.get(year+'-'+month)):
             idx = 'Q'+str(q_num)+' '+year
             quarterly_totals.append([idx, quarterly_total])
