@@ -1085,6 +1085,7 @@ html {
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+/*
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1092,6 +1093,7 @@ body {
   color: #333;
   background-color: #fff;
 }
+*/
 input,
 button,
 select,
@@ -4868,7 +4870,6 @@ a.badge:focus {
 .jumbotron p {
   margin-bottom: 15px;
   font-size: 21px;
-  font-weight: 200;
 }
 .jumbotron > hr {
   border-top-color: #d5d5d5;
@@ -6165,7 +6166,7 @@ button.close {
   background-image:         linear-gradient(to right, rgba(0, 0, 0, .5) 0%, rgba(0, 0, 0, .0001) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
   background-repeat: repeat-x;*/
-  background-image: none; 
+  background-image: none;
 }
 .carousel-control.right {
   right: 0;
@@ -6176,7 +6177,7 @@ button.close {
   background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .5) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
   background-repeat: repeat-x;*/
-  background-image: none; 
+  background-image: none;
 }
 .carousel-control:hover,
 .carousel-control:focus {

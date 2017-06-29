@@ -23,6 +23,9 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #434a54;
   background-color: white;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: white;
 }
 
 a {
