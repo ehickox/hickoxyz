@@ -1,5 +1,4 @@
 from app.models import Project
-from dropbox.client import DropboxOAuth2FlowNoRedirect, DropboxClient
 import dateutil.parser
 import datetime
 import json
