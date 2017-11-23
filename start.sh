@@ -1,4 +1,2 @@
 #!/bin/bash
-source venv/bin/activate
-venv/bin/python ./server.py
-#pip install -r requirements.txt
+gunicorn -c gunicorn_config.py server:app
