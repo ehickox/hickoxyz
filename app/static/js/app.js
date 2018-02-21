@@ -15,7 +15,7 @@ $(document).ready(function () {
     }, 20000);
 
     window.setTimeout(function () {
-	addAlert("<center><p>Photographs and Website © 2015 Eli Hickox</p></center>");
+	addAlert("<center><p>Photographs and Website © 2015 - Present Eli Hickox</p></center>");
     }, 20000);
 });
 
