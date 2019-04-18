@@ -1,1 +1,11 @@
-body { padding-top: 70px; }
+.showme {
+display: none;
+}
+
+.showhim:hover .showme {
+display: block;
+}
+
+.showhim:hover .hideme {
+display: none;
+}
