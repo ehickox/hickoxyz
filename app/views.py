@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from app.controller import get_projects, get_last_years_commits
+from app.controller import get_projects, get_last_years_commits, get_works
 
 @app.route('/')
 def index():
@@ -15,6 +15,11 @@ def about():
 def projects():
     projects_list = get_projects()
     return render_template('projects.html', projects=projects_list)
+
+@app.route('/works')
+def works():
+    projects_list = get_works()
+    return render_template('works.html', projects=projects_list)
 
 @app.route('/stats')
 def stats():

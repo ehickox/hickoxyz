@@ -1,4 +1,4 @@
-from app.models import Project
+from app.models import Project, LiteraryWork
 import dateutil.parser
 import datetime
 import json
@@ -69,37 +69,26 @@ def get_last_years_commits():
 
     return weekly_totals, quarterly_totals, quarterly_avgs,exes_list
 
+def get_works():
+    works = []
+    works.append(get_tall_tales())
+    return works
+
 def get_projects():
     projects = []
     projects.append(get_vimdeploy())
-    projects.append(get_pebble_bitcoin_wallet())
     projects.append(get_eshcript())
     return projects
 
-def get_pebble_bitcoin_wallet():
-    project = Project(title="BitcoinWallet",
-                      tagline="A Pebble watch face that displays a Bitcoin address QR code",
-                      date="April, 2014",
-                      github="https://github.com/ehickox/BitcoinWallet")
-
-    desc = ("A Pebble watch face that displays an image of your Bitcoin (or other alt coin) "
-            "wallet's QR code. Imagine if a friend wanted to send you money... With this app, "
-            "all you need to do is switch your watchface and have your friend scan your watch "
-            " with his or her phone.<br>"
-            "<br>"
-            "To install, click the download link below, then follow these instructions:<br>"
-            "<br>"
-            "In 'resources/images/' there is a .png file called 'wallet.png'. To adapt this "
-            "watch face for your own purposes, all you need to do is replace the 'wallet.png' "
-            "with a PNG of your own image, scaled to 140x140 pixels. From there, run: <br>"
-            "<br>"
-            "<samp>$ pebble build</samp><br> "
-            "<samp>$ pebble install --phone 'IP ADDRESS OF YOUR PHONE'</samp>")
-
-    project.append_description(desc)
-    project.add_download("https://github.com/ehickox/BitcoinWallet/archive/master.zip")
-
-    return project
+def get_tall_tales():
+    work = LiteraryWork(title="Tall Tales",
+                        date="July, 2019")
+    desc = ("A collection of short stories "
+            "including Sunset With Savannah, Loathing Las Vegas, and more. Free to download "
+            "in PDF, ePub (Apple Books) and MOBI (Kindle) formats.")
+    work.append_description(desc)
+    work.add_download("https://cloudflare-ipfs.com/ipfs/QmTcnBYEKgTSR19c9faz325NTELvLa8pkNN23rLHeaJyyZ")
+    return work
 
 def get_vimdeploy():
     project = Project(title="vimdeploy",
