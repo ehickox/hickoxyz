@@ -72,6 +72,7 @@ def get_last_years_commits():
 def get_works():
     works = []
     works.append(get_tall_tales())
+    works.append(get_the_outsider())
     return works
 
 def get_projects():
@@ -82,12 +83,22 @@ def get_projects():
 
 def get_tall_tales():
     work = LiteraryWork(title="Tall Tales",
-                        date="July, 2019")
+                        date="June, 2019")
     desc = ("A collection of short stories "
             "including Sunset With Savannah, Loathing Las Vegas, and more. Free to download "
             "in PDF, ePub (Apple Books) and MOBI (Kindle) formats.")
     work.append_description(desc)
     work.add_download("https://cloudflare-ipfs.com/ipfs/QmTcnBYEKgTSR19c9faz325NTELvLa8pkNN23rLHeaJyyZ")
+    return work
+
+def get_the_outsider():
+    work = LiteraryWork(title="The Outsider",
+                        date="September, 2019")
+    desc = ("A novella loosely based around events during the year 2016 which "
+            "tells the story of a time, a place, and a generation. "
+            "Free to download in PDF, ePub (Apple Books) and MOBI (Kindle) formats.")
+    work.append_description(desc)
+    work.add_download("https://cloudflare-ipfs.com/ipfs/QmcxxVSpu1gsf7TNPjppeRMqSMTBxHqet9Nxamp9faLpaF")
     return work
 
 def get_vimdeploy():
