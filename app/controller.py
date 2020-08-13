@@ -88,7 +88,7 @@ def get_tall_tales():
             "including Sunset With Savannah, Loathing Las Vegas, and more. Free to download "
             "in PDF, ePub (Apple Books) and MOBI (Kindle) formats.")
     work.append_description(desc)
-    work.add_download("magnet:?xt=urn:btih:34a45cbfd46bd0b93eec2f1a40fb8b8fc277d73e&dn=Tall%20Tales&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce")
+    work.add_download("magnet:?xt=urn:btih:3fed609a1bfc8a0564a9388b0280db9659fbd300&dn=Tall%20Tales&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce")
     return work
 
 def get_the_outsider():
