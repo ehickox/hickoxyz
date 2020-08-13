@@ -88,7 +88,7 @@ def get_tall_tales():
             "including Sunset With Savannah, Loathing Las Vegas, and more. Free to download "
             "in PDF, ePub (Apple Books) and MOBI (Kindle) formats.")
     work.append_description(desc)
-    work.add_download("https://cloudflare-ipfs.com/ipfs/QmTcnBYEKgTSR19c9faz325NTELvLa8pkNN23rLHeaJyyZ")
+    work.add_download("magnet:?xt=urn:btih:34a45cbfd46bd0b93eec2f1a40fb8b8fc277d73e&dn=Tall%20Tales&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce")
     return work
 
 def get_the_outsider():
@@ -98,7 +98,7 @@ def get_the_outsider():
             "tells the story of a time, a place, and a generation. "
             "Free to download in PDF, ePub (Apple Books) and MOBI (Kindle) formats.")
     work.append_description(desc)
-    work.add_download("https://cloudflare-ipfs.com/ipfs/QmcxxVSpu1gsf7TNPjppeRMqSMTBxHqet9Nxamp9faLpaF")
+    work.add_download("magnet:?xt=urn:btih:3a807307ecc8da5b328ff684fa1a11d8d387e4a9&dn=The%20Outsider&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce")
     return work
 
 def get_vimdeploy():
