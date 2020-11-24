@@ -29,7 +29,7 @@ body {
 }
 
 a {
-  color: #3bafda;
+  color: #0B33EE;
   text-decoration: none;
 }
 a:hover, a:focus {
@@ -2362,7 +2362,7 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
   text-decoration: none;
 }
 .footer-copyright {
-  color: #aab2bd;
+  color: #434a54;
 }
 
 /**
