@@ -2,8 +2,8 @@
 import app
 import unittest
 
-class FirstTestCase(unittest.TestCase):
 
+class FirstTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.app.test_client()
 
@@ -11,8 +11,9 @@ class FirstTestCase(unittest.TestCase):
         pass
 
     def test_index_response(self):
-        rv = self.app.get('/')
-        assert 'Enjoy coding!' in rv.data
+        rv = self.app.get("/")
+        assert "Enjoy coding!" in rv.data
+
 
 if __name__ == "__main__":
     unittest.main()
