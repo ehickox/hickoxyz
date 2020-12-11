@@ -9,3 +9,8 @@ display: block;
 .showhim:hover .hideme {
 display: none;
 }
+
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
