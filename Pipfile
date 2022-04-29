@@ -21,8 +21,8 @@ wrapt = "==1.11.1"
 Deprecated = "==1.2.5"
 Flask = "~=1.0.2"
 Jinja2 = ">=2.11.3"
-PyGithub = "~=1.43.7"
-PyJWT = "~=1.7.1"
+PyGithub = "~=1.55"
+PyJWT = ">=1.7.1"
 Werkzeug = "~=1.0.1"
 
 [requires]
