@@ -17,8 +17,6 @@ urllib3 = ">=1.25.9"
 wrapt = "==1.11.1"
 Deprecated = "==1.2.5"
 Flask = "~=2.0.3"
-Jinja2 = ">=2.11.3"
-PyJWT = ">=1.7.1"
 
 [requires]
 python_version = '3.8'
