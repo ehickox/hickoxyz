@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.8.13-alpine
+FROM python:3.8.16-alpine
 
 # install dependencies
 RUN apk update && \
@@ -8,6 +8,9 @@ RUN apk update && \
 # set environment varibles
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+
+# upgrade pip
+RUN pip install --upgrade pip
 
 # set working directory
 WORKDIR /usr/src/app
@@ -22,3 +25,5 @@ RUN chmod +x /usr/src/app/start.sh
 
 # add app
 COPY . /usr/src/app
+
+CMD ./start.sh
