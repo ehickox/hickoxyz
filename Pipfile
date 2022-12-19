@@ -18,6 +18,3 @@ python_version = '3.8'
 [dev-packages]
 pytest = "*"
 black = "*"
-
-[pipenv]
-allow_prereleases = true
