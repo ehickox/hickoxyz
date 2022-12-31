@@ -14,3 +14,7 @@ display: none;
    background-image:none !important;
    filter:none !important;
 }
+
+.jumbotron p {
+  font-weight: normal;
+}
