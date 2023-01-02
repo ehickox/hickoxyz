@@ -1,0 +1,51 @@
+{% extends 'v2/base.html' %}
+
+
+{% block body %}
+<h1 class="margined centered">Eli Hickox</h1>
+<h2 class="margined centered"> Software Engineer</h2>
+<h3 class="margined centered"> San Francisco Bay Area</h3>
+
+
+<p class="centered resizable">
+  <div class="slideshow-container resizable">
+
+  <div class="mySlides fade">
+    <div class="slides-numbertext">1 / 4</div>
+    <img class="resizable" src="{{static('img/home0.jpg')}}">
+    <div class="slides-caption">Piazza del Popolo, Rome, Italy</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="slides-numbertext">2 / 4</div>
+    <img class="resizable" src="{{static('img/home1.jpg')}}">
+    <div class="slides-caption">Mission Dolores Park, San Francisco, CA</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="slides-numbertext">3 / 4</div>
+    <img class="resizable" src="{{static('img/home2.jpg')}}">
+    <div class="slides-caption">Old San Juan, Puerto Rico</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="slides-numbertext">4 / 4</div>
+    <img class="resizable" src="{{static('img/home3.jpg')}}">
+    <div class="slides-caption">Mission Dolores Park, San Francisco, CA</div>
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+  </div>
+</p>
+{% endblock%}

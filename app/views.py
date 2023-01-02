@@ -5,7 +5,7 @@ from app.controller import get_projects, get_last_years_commits, get_works
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("v2/index.html")
 
 
 @app.route("/about")
