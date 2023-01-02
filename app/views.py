@@ -10,7 +10,7 @@ def index():
 
 @app.route("/about")
 def about():
-    return render_template("about.html",
+    return render_template("v2/about.html",
                             title="about - elihickox.com")
 
 
