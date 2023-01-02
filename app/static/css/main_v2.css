@@ -29,6 +29,7 @@
 */
 
 .top-nav {
+  z-index: 999;
   display: flex;
   position: -webkit-sticky; /* Safari */
   position: sticky;
@@ -203,7 +204,6 @@
   max-width: max-content;
   position: relative;
   margin: auto;
-  z-index: -1;
 }
 
 /* Hide the images by default */
