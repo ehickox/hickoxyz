@@ -152,7 +152,7 @@ def get_vimdeploy():
 
 def get_eshcript():
     project = Project(
-        title="eshcript",
+        title="ESHcript",
         tagline="An experimental Lisp programming language",
         date="April, 2014",
         github="https://github.com/ehickox/eshcript",

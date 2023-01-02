@@ -17,7 +17,12 @@ def about():
 @app.route("/projects")
 def projects():
     projects_list = get_projects()
-    return render_template("projects.html", projects=projects_list, title="projects - elihickox.com")
+    return render_template("v2/projects.html", projects=projects_list, title="projects - elihickox.com")
+
+@app.route("/patents")
+def patents():
+    projects_list = get_projects()
+    return render_template("v2/projects.html", projects=projects_list, title="projects - elihickox.com")
 
 
 @app.route("/works")
