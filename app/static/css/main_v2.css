@@ -12,6 +12,11 @@
     margin-left: 5%;
 }
 
+samp {
+  font-family:'Courier New', Courier, monospace;
+  font-style: normal;
+}
+
 .resizable {
     width: auto;
     height: auto;
