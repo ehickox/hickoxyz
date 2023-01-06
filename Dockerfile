@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.8.16-alpine
+FROM python:3.9.16-alpine
 
 # install dependencies
 RUN apk update && \

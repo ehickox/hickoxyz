@@ -1,7 +1,12 @@
-from flask import render_template, redirect
+from flask import render_template, redirect, send_from_directory
 from app import app
 from app.controller import get_projects, get_last_years_commits, get_works
 
+
+
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory(app.static_folder, 'robots.txt')
 
 @app.route("/")
 def index():
