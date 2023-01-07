@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.9.16-alpine
+FROM python:3.11.1-alpine
 
 # install dependencies
 RUN apk update && \
@@ -8,22 +8,22 @@ RUN apk update && \
 # set environment varibles
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+ENV PROJECT_DIR=/usr/src/app
 
 # upgrade pip
 RUN pip install --upgrade pip
+RUN pip install pipenv
 
 # set working directory
-WORKDIR /usr/src/app
-
-# add and install requirements
-COPY ./requirements.txt /usr/src/app/requirements.txt
-RUN pip install -r requirements.txt
-
-# add entrypoint.sh
-COPY ./start.sh /usr/src/app/start.sh
-RUN chmod +x /usr/src/app/start.sh
+WORKDIR ${PROJECT_DIR}
 
 # add app
-COPY . /usr/src/app
+COPY . ${PROJECT_DIR}
+
+# add and install requirements
+RUN pipenv install --system --deploy
+
+# make start.sh executable
+RUN chmod +x start.sh
 
 CMD ./start.sh
