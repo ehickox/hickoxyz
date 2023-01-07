@@ -1,6 +1,6 @@
 from flask import render_template, redirect, send_from_directory
 from app import app
-from app.controller import get_projects, get_last_years_commits, get_works
+from app.controller import get_projects, get_works
 
 
 

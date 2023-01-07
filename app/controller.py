@@ -1,77 +1,4 @@
 from app.models import Project, LiteraryWork
-import dateutil.parser
-import datetime
-import json
-
-
-def get_last_years_commits():
-    data = None
-    weekly_totals = []
-    quarterly_totals = []
-    quarterly_avgs = []
-    with open("app/historic_commits.json") as data_file:
-        data = json.load(data_file)
-
-    dates_list = []
-    for datestr in data.keys():
-        if "2011" not in datestr and "2012" not in datestr and "2013" not in datestr:
-            dates_list.append(dateutil.parser.parse(datestr))
-
-    dates_list.sort()
-    quarter_ends = ["03", "06", "09", "12"]
-    days_in_year_month = {}  # {'2016-01': [5, 8, 9, ...]}
-    quarterly_total = 0
-    num_weeks_per_quarter = 0
-    quarter_idx = 0
-    q_num = 1
-    quarter_calculated = {}
-    for dat in dates_list:
-        key = str(dat)
-        value = data[key]
-        datestr = key.split(" ")[0]
-        year = datestr.split("-")[0]
-        month = datestr.split("-")[1]
-        day = datestr.split("-")[2]
-        if days_in_year_month.get(year + "-" + month, []) == []:
-            days_in_year_month[year + "-" + month] = [int(day)]
-        else:
-            days_in_year_month.get(year + "-" + month).append(int(day))
-
-    for dat in dates_list:
-        key = str(dat)
-        value = data[key]
-        weekly_totals.append([key, value])
-        quarterly_total += value
-        num_weeks_per_quarter += 1
-        datestr = key.split(" ")[0]
-        year = datestr.split("-")[0]
-        month = datestr.split("-")[1]
-        day = datestr.split("-")[2]
-        # print(datestr+' '+str(value))
-        if month in quarter_ends and int(day) == max(
-            days_in_year_month.get(year + "-" + month)
-        ):
-            idx = "Q" + str(q_num) + " " + year
-            quarterly_totals.append([idx, quarterly_total])
-            quarterly_avgs.append([idx, (float(quarterly_total) / 12)])
-            num_weeks_per_quarter = 0
-            quarterly_total = 0
-            quarter_calculated[month + " " + year] = True
-            q_num += 1
-            if q_num > 4:
-                q_num = 1
-
-    one_x = 0
-    for avg in quarterly_avgs:
-        if avg[1] != 0 and one_x == 0:
-            one_x = avg[1]
-
-    exes_list = []
-    for avg in quarterly_avgs:
-        exes_list.append([avg[0], avg[1] / float(one_x)])
-
-    return weekly_totals, quarterly_totals, quarterly_avgs, exes_list
-
 
 def get_works():
     works = []
@@ -82,6 +9,8 @@ def get_works():
 
 def get_projects():
     projects = []
+    projects.append(get_hickoxyz_project())
+    projects.append(get_ehlabs_project())
     projects.append(get_vimdeploy())
     projects.append(get_eshcript())
     return projects
@@ -114,6 +43,59 @@ def get_the_outsider():
     )
     return work
 
+def get_ehlabs_project():
+    project = Project(
+        title="ehLabs",
+        tagline="an experimental social media application and content management system",
+        date="October, 2015",
+        link="https://www.ehlabs.net"
+    )
+
+    desc = (
+        "ehLabs is a catch-all for many of my personal projects. It contains several applications:"
+        "<br>"
+        "- real-time chat app"
+        "<br>"
+        "- blogging platform with backups into IPFS"
+        "<br>"
+        "- file hosting application with backups into IPFS and encryption capabilities"
+        "<br>"
+        "- news aggregator"
+        "<br>"
+        "- issue tracker"
+        "<br>"
+        "- public API"
+        "<br>"
+        "<br>"
+        "ehLabs is currently invite only."
+        "<br>"
+        "ehLabs is closed source software."
+    )
+
+    project.append_description(desc)
+
+    return project
+
+def get_hickoxyz_project():
+    project = Project(
+        title="hickoxyz",
+        tagline="The personal website of Eli Hickox",
+        date="March, 2015",
+        github="https://github.com/ehickox/hickoxyz",
+    )
+
+    desc = (
+        "hickoxyz is the repo name for the website you are viewing right now. It is a python3 Flask web app."
+        "<br>"
+        "The front end is custom and frameworkless. The CSS and (minimal) Javascript are bespoke. The navbar and slideshow components were written from scratch."
+        "<br>"
+        "As a design principle, I tried to use as little Javascript as possible to accomplish what I wanted."
+    )
+
+    project.append_description(desc)
+    project.add_license("NCSA")
+
+    return project
 
 def get_vimdeploy():
     project = Project(
@@ -146,6 +128,7 @@ def get_vimdeploy():
 
     project.append_description(desc)
     project.add_download("https://github.com/ehickox/vimdeploy/archive/master.zip")
+    project.add_license("NCSA")
 
     return project
 
