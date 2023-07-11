@@ -50,6 +50,7 @@ samp {
   padding: 1em;
   margin-left: -8px;
   margin-right: -8px;
+  margin-top: -8px;
   width: calc(100% - 16px);
 }
 
