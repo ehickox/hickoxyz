@@ -1,8 +1,11 @@
 let slideIndex = 0;
 showSlidesAuto();
+let intervalId = setInterval(showSlidesAuto, 4000); // Change image every 6 seconds
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
+  clearInterval(intervalId);
+  intervalId = setInterval(showSlidesAuto, 4000); // Change image every 6 seconds
 }
 
 function currentSlide(n) {
@@ -38,6 +41,6 @@ function showSlidesAuto() {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlidesAuto, 4000); // Change image every 4 seconds
+  dots[slideIndex-1].className += " active";
+  slides[slideIndex-1].style.display = "block";
 } 
