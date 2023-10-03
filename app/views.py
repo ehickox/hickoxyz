@@ -36,3 +36,7 @@ def works():
 @app.route("/blog")
 def blog():
     return redirect("https://www.ehlabs.net/blog/u/eli", code=302)
+
+@app.route("/radio")
+def blog():
+    return redirect("https://qsl.net/ko6bcw", code=302)
