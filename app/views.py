@@ -26,9 +26,7 @@ def projects():
 
 @app.route("/patents")
 def patents():
-    projects_list = get_projects()
-    return render_template("v2/projects.html", projects=projects_list, title="projects - elihickox.com")
-
+    return redirect("https://patents.justia.com/inventor/eli-spencer-hickox", code=302)
 
 @app.route("/works")
 def works():
