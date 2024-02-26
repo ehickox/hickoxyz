@@ -81,13 +81,14 @@ def get_casino_project():
     project = Project(
         title="casino",
         tagline="a video poker simulator",
-        date="October 2021",
+        date="October, 2021",
         link="https://github.com/ehickox/casino"
     )
 
     desc = ("Casino is a python3 PyQT desktop application designed to simulate a video poker machine. It was designed to be deployed on a touch screen + Raspberry Pi. It uses the NIST randomness beacon when shuffling the cards.")
     
     project.append_description(desc)
+    project.add_license("NCSA")
     return project
 
 def get_hickoxyz_project():
