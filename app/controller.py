@@ -11,6 +11,7 @@ def get_projects():
     projects = []
     projects.append(get_casino_project())
     projects.append(get_hickoxyz_project())
+    projects.append(get_teetime_booker_project())
     projects.append(get_ehlabs_project())
     projects.append(get_vimdeploy())
     projects.append(get_eshcript())
@@ -109,6 +110,25 @@ def get_hickoxyz_project():
 
     project.append_description(desc)
     project.add_license("NCSA")
+
+    return project
+
+def get_teetime_booker_project():
+    project = Project(
+        title="teetime_booker",
+        tagline="a script I used to book my favorite golf teetime",
+        date="April, 2016",
+        github="https://github.com/ehickox/teetime_booker",
+    )
+
+    desc = (
+        "teetime_booker was a little python script I wrote to book my favorite golf teetime at a local course."
+        "<br>"
+        "I'm pretty sure this script is defunct and no longer works. Nevertheless it is my most-starred and most-forked repo on Github, so I've included it in this collection."
+    )
+
+    project.append_description(desc)
+    project.add_license("MIT")
 
     return project
 
