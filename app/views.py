@@ -39,4 +39,4 @@ def blog():
 
 @app.route("/radio")
 def radio():
-    return redirect("https://qsl.net/ko6bcw", code=302)
+    return redirect("https://qsl.net/k6bcw", code=302)
