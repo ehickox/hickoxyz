@@ -1,6 +1,7 @@
-from flask import render_template, redirect, send_from_directory
+from flask import render_template, redirect, send_from_directory, Response
 from app import app
 from app.controller import get_projects, get_works
+import requests
 
 
 
@@ -37,6 +38,22 @@ def works():
 def blog():
     return redirect("https://www.ehlabs.net/blog/u/eli", code=302)
 
-@app.route("/radio")
-def radio():
-    return redirect("https://qsl.net/k6bcw", code=302)
+
+# @app.route("/radio/", defaults={'subpath': ''})
+# @app.route("/radio/<path:subpath>")
+# def radio(subpath):
+#     if subpath:
+#         return redirect(f"https://qsl.net/k6bcw/{subpath}", code=302)
+#     else:
+#         return redirect("https://qsl.net/k6bcw", code=302)
+    
+
+@app.route("/radio/", defaults={'subpath': ''})
+@app.route("/radio/<path:subpath>")
+def radio(subpath):
+    target_url = f"https://qsl.net/k6bcw/{subpath}"
+    response = requests.get(target_url)
+    excluded_headers = ['content-encoding', 'content-length', 'transfer-encoding', 'connection']
+    headers = [(name, value) for name, value in response.raw.headers.items()
+               if name.lower() not in excluded_headers]
+    return Response(response.content, response.status_code, headers)
