@@ -12,6 +12,26 @@
     margin-left: 5%;
 }
 
+a {
+  text-decoration: none; /* Remove underline by default */
+}
+
+a:link {
+    color: #1D9BF0;  /* Lighter blue for better contrast on dark backgrounds */
+}
+
+a:visited {
+    color: #1D9BF0;  /* Lighter blue for better contrast on dark backgrounds */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: #99CCFF;
+}
+
 samp {
   font-family:'Courier New', Courier, monospace;
   font-style: normal;
