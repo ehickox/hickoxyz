@@ -49,6 +49,16 @@ samp {
     }
 }
 
+/* Custom styles for the icon links */
+.icon-links a {
+  margin: 0 10px;
+  color: #000; /* black color */
+  text-decoration: none;
+}
+.icon-links a:hover {
+  color: #555; /* slightly lighter/darker on hover */
+}
+
 /*
     BEGIN NAVBAR
 */

@@ -86,7 +86,7 @@ def get_casino_project():
         github="https://github.com/ehickox/casino"
     )
 
-    desc = ("Casino is a python3 PyQT desktop application designed to simulate a video poker machine. It was designed to be deployed on a touch screen + Raspberry Pi. It uses the NIST randomness beacon when shuffling the cards. This was the last personal project I did before the LLM revolution changed software development.")
+    desc = ("Casino is a python3 PyQT desktop application designed to simulate a video poker machine. It was designed to be deployed on a touch screen + Raspberry Pi. It uses the NIST randomness beacon when shuffling the cards. This was the last personal project I did before the LLM revolution changed software development. Some time later, I extended this application's functionality to include blackjack nearly entirely using LLMs.")
     
     project.append_description(desc)
     project.add_license("NCSA")
