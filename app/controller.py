@@ -9,6 +9,7 @@ def get_works():
 
 def get_projects():
     projects = []
+    projects.append(get_eh_radio_logger_project())
     projects.append(get_casino_project())
     projects.append(get_hickoxyz_project())
     projects.append(get_teetime_booker_project())
@@ -76,6 +77,20 @@ def get_ehlabs_project():
 
     project.append_description(desc)
 
+    return project
+
+def get_eh_radio_logger_project():
+    project = Project(
+        title="eh Radio Logger",
+        tagline="a ham radio logging mobile app",
+        date="May, 2025",
+    )
+    desc = ("eh Radio Logger is a simple amateur radio logging application for iOS. It has large, chunky buttons and is designed for use with one hand in the field when doing POTA or SOTA operations. "
+            "It is written in Typescript and uses the React Native framework. "
+            "<br>"
+            "eh Radio Logger is closed source software. Download it on the Apple App Store using the link below.")
+    project.append_description(desc)
+    project.add_download("https://apps.apple.com/us/app/eh-radio-logger/id6744907119?itscg=30200&itsct=apps_box_link&mttnsubad=6744907119")
     return project
 
 def get_casino_project():
