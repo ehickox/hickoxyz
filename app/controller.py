@@ -83,7 +83,7 @@ def get_eh_radio_logger_project():
     project = Project(
         title="eh Radio Logger",
         tagline="a ham radio logging mobile app",
-        date="May, 2025",
+        date="Summer, 2025",
     )
     desc = ("eh Radio Logger is a simple amateur radio logging application for iOS. It has large, chunky buttons and is designed for use with one hand in the field when doing POTA or SOTA operations. "
             "It is written in Typescript and uses the React Native framework. "
