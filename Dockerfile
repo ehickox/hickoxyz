@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.11.4-alpine
+FROM python:3.13.9-alpine
 
 # install dependencies
 RUN apk update && \
