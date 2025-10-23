@@ -3,16 +3,15 @@ FROM python:3.11.4-alpine
 
 # install dependencies
 RUN apk update && \
-    apk add --virtual build-deps gcc musl-dev
+    apk add --no-cache gcc musl-dev curl
 
 # set environment varibles
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PROJECT_DIR=/usr/src/app
 
-# upgrade pip
-RUN pip install --upgrade pip
-RUN pip install pipenv
+# install uv
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh && ln -sf /root/.local/bin/uv /usr/local/bin/uv
 
 # set working directory
 WORKDIR ${PROJECT_DIR}
@@ -20,9 +19,12 @@ WORKDIR ${PROJECT_DIR}
 # add and install requirements
 # doing this separately allows docker to cache
 # dependencies when code changes
-COPY ./Pipfile ${PROJECT_DIR}/Pipfile
-COPY ./Pipfile.lock ${PROJECT_DIR}/Pipfile.lock
-RUN pipenv install --system --deploy
+COPY ./pyproject.toml ${PROJECT_DIR}/pyproject.toml
+COPY ./uv.lock ${PROJECT_DIR}/uv.lock
+RUN uv sync --frozen --no-dev
+
+# ensure venv on PATH
+ENV PATH=${PROJECT_DIR}/.venv/bin:$PATH
 
 # add entrypoint.sh
 COPY ./start.sh ${PROJECT_DIR}/start.sh

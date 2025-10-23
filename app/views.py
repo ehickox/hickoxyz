@@ -11,19 +11,19 @@ def robots():
 
 @app.route("/")
 def index():
-    return render_template("v2/index.html")
+    return render_template("index.html")
 
 
 @app.route("/about")
 def about():
-    return render_template("v2/about.html",
+    return render_template("about.html",
                             title="about - elihickox.com")
 
 
 @app.route("/projects")
 def projects():
     projects_list = get_projects()
-    return render_template("v2/projects.html", projects=projects_list, title="projects - elihickox.com")
+    return render_template("projects.html", projects=projects_list, title="projects - elihickox.com")
 
 @app.route("/patents")
 def patents():
