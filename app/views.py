@@ -36,7 +36,7 @@ def works():
 
 @app.route("/blog")
 def blog():
-    return redirect("https://www.ehlabs.net/blog/u/eli", code=302)
+    return redirect("https://www.ehlabs.net/blog/u/eli?articles=true", code=302)
 
 
 # @app.route("/radio/", defaults={'subpath': ''})
