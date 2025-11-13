@@ -9,11 +9,12 @@ def get_works():
 
 def get_projects():
     projects = []
+    projects.append(get_arrstack_project())
     projects.append(get_eh_radio_logger_project())
     projects.append(get_casino_project())
-    projects.append(get_hickoxyz_project())
     projects.append(get_teetime_booker_project())
     projects.append(get_ehlabs_project())
+    projects.append(get_hickoxyz_project())
     projects.append(get_vimdeploy())
     projects.append(get_eshcript())
     return projects
@@ -98,7 +99,7 @@ def get_casino_project():
         title="casino",
         tagline="a video poker simulator",
         date="October, 2021",
-        github="https://github.com/ehickox/casino"
+        git_url="https://github.com/ehickox/casino"
     )
 
     desc = ("Casino is a python3 PyQT desktop application designed to simulate a video poker machine. It was designed to be deployed on a touch screen + Raspberry Pi. It uses the NIST randomness beacon when shuffling the cards. This was the last personal project I did before the LLM revolution changed software development. Some time later, I extended this application's functionality to include blackjack nearly entirely using LLMs.")
@@ -112,7 +113,7 @@ def get_hickoxyz_project():
         title="hickoxyz",
         tagline="The personal website of Eli Hickox",
         date="March, 2015",
-        github="https://github.com/ehickox/hickoxyz",
+        git_url="https://github.com/ehickox/hickoxyz",
     )
 
     desc = (
@@ -133,7 +134,7 @@ def get_teetime_booker_project():
         title="teetime_booker",
         tagline="a script I used to book my favorite golf teetime",
         date="April, 2016",
-        github="https://github.com/ehickox/teetime_booker",
+        git_url="https://github.com/ehickox/teetime_booker",
     )
 
     desc = (
@@ -152,7 +153,7 @@ def get_vimdeploy():
         title="vimdeploy",
         tagline="Quickly and easily deploy my favorite Vim configuration",
         date="February, 2015",
-        github="https://github.com/ehickox/vimdeploy",
+        git_url="https://github.com/ehickox/vimdeploy",
     )
 
     desc = (
@@ -188,7 +189,7 @@ def get_eshcript():
         title="ESHcript",
         tagline="An experimental Lisp programming language",
         date="April, 2014",
-        github="https://github.com/ehickox/eshcript",
+        git_url="https://github.com/ehickox/eshcript",
         download="https://github.com/ehickox/eshcript/archive/master.zip",
     )
 
@@ -218,4 +219,41 @@ def get_eshcript():
 
     project.append_description(desc)
     project.add_license("MIT")
+    return project
+
+def get_arrstack_project():
+    project = Project(
+        title="arrstack",
+        tagline="a leakproof Docker Compose configuration for a complete media automation stack with VPN protection",
+        date="October, 2025",
+        git_url="https://gitlab.com/ehickox/arrstack",
+    )
+
+    desc = (
+        "arrstack provides a secure, containerized media automation setup that routes all traffic through WireGuard VPN to protect your privacy while downloading and managing media content. The stack includes all the essential tools for automated media acquisition and management."
+        "<br>"
+        "<br>"
+        "Services included:"
+        "<br>"
+        "- WireGuard VPN for network routing and privacy"
+        "<br>"
+        "- Transmission for secure torrent downloading"
+        "<br>"
+        "- Radarr for movie collection management"
+        "<br>"
+        "- Sonarr for TV show collection management"
+        "<br>"
+        "- Jackett for torrent indexer aggregation"
+        "<br>"
+        "- FlareSolverr for bypassing CloudFlare protection"
+        "<br>"
+        "<br>"
+        "The stack is designed with a leakproof architecture ensuring all network traffic is routed through the VPN tunnel. It features hardlink support to save disk space and can be deployed via Docker Compose or Portainer."
+        "<br>"
+        "<br>"
+        "<em>This software is for educational use only. Users are responsible for complying with all applicable laws and regulations in their jurisdiction.</em>"
+    )
+
+    project.append_description(desc)
+    project.add_license("NCSA")
     return project

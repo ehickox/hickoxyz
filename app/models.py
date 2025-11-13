@@ -5,7 +5,7 @@ class Project:
         tagline="",
         date="",
         description="",
-        github="",
+        git_url="",
         link="",
         download="",
         copywrite="Eli Hickox",
@@ -14,7 +14,7 @@ class Project:
         self.tagline = tagline
         self.date = date
         self.description = description
-        self.github = github
+        self.git_url = git_url
         self.link = link
         self.download = download
         self.copywrite = copywrite

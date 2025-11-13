@@ -16,8 +16,8 @@
 {% if project.download %}
 <p class="margined"><a href={{project.download}}>Download {{project.title}}</a></p>
 {% endif %}
-{% if project.github %}
-<p class="margined">{{project.title}} <a href={{project.github}}> is on GitHub</a>. Pull requests and bug reports are welcome.</p>
+{% if project.git_url %}
+<p class="margined">{{project.title}} <a href={{project.git_url}}> is on {% if 'gitlab' in project.git_url.lower() %}GitLab{% else %}GitHub{% endif %}</a>. Pull requests and bug reports are welcome.</p>
 {% endif %}
 <p class="margined">© {{project.copywrite}}</p>
 
