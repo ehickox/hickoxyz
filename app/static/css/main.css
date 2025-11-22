@@ -241,13 +241,22 @@ samp {
 /* BEGIN Slideshow */
 /* Slideshow container */
 .slideshow-container {
-  max-width: max-content;
+  max-width: 600px;
   position: relative;
   margin: auto;
 }
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+/* Ensure uniform image sizing in slideshow */
+.mySlides img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
 /* Next & previous buttons */
 .prev, .next {
