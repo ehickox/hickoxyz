@@ -12,7 +12,7 @@ class FirstTestCase(unittest.TestCase):
 
     def test_index_response(self):
         rv = self.app.get("/")
-        assert "Enjoy coding!" in rv.data
+        assert b"Eli Hickox" in rv.data
 
 
 if __name__ == "__main__":

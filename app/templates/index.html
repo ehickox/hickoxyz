@@ -1,72 +1,64 @@
 {% extends 'base.html' %}
 
-
 {% block body %}
-<h1 class="margined centered">Eli Hickox</h1>
-<h2 class="margined centered"> Software Engineer</h2>
-<h3 class="margined centered"> San Francisco Bay Area</h3>
+<section class="hero">
+    <div class="container">
+        <span class="hero__eyebrow">Software Engineer</span>
+        <h1 class="hero__title">Eli Hickox</h1>
+        <p class="hero__subtitle">Building systems that scale</p>
+        <span class="hero__location">San Francisco Bay Area</span>
+    </div>
+</section>
 
+<section class="gallery">
+    <div class="gallery__container">
+        <div class="gallery__slide is-active">
+            <img class="gallery__image" alt="Golden Gate Bridge, San Francisco, CA" src="{{static('img/gg_bridge.webp')}}">
+            <div class="gallery__caption">Golden Gate Bridge, San Francisco, CA</div>
+        </div>
 
-<p class="centered resizable">
-  <div class="slideshow-container resizable">
+        <div class="gallery__slide">
+            <img class="gallery__image" alt="Piazza del Popolo, Rome, Italy" src="{{static('img/home0.webp')}}">
+            <div class="gallery__caption">Piazza del Popolo, Rome, Italy</div>
+        </div>
 
-  <div class="mySlides fade">
-    <div class="slides-numbertext">1 / 7</div>
-    <img class="resizable" alt="Golden Gate Bridge, San Francisco, CA" src="{{static('img/gg_bridge.webp')}}">
-    <div class="slides-caption">Golden Gate Bridge, San Francisco, CA</div>
-  </div>
+        <div class="gallery__slide">
+            <img class="gallery__image" alt="Mission Dolores Park, San Francisco, CA" src="{{static('img/home1.webp')}}">
+            <div class="gallery__caption">Mission Dolores Park, San Francisco, CA</div>
+        </div>
+        
+        <div class="gallery__slide">
+            <img class="gallery__image" alt="Old San Juan, Puerto Rico" src="{{static('img/home2.webp')}}">
+            <div class="gallery__caption">Old San Juan, Puerto Rico</div>
+        </div>
 
-  <div class="mySlides fade">
-    <div class="slides-numbertext">2 / 7</div>
-    <img class="resizable" alt="Piazza del Popolo, Rome, Italy" src="{{static('img/home0.webp')}}">
-    <div class="slides-caption">Piazza del Popolo, Rome, Italy</div>
-  </div>
+        <div class="gallery__slide">
+            <img class="gallery__image" alt="Jogyesa, Seoul, South Korea" src="{{static('img/home3.webp')}}">
+            <div class="gallery__caption">Jogyesa, Seoul, South Korea</div>
+        </div>
+        
+        <div class="gallery__slide">
+            <img class="gallery__image" alt="St. George's, Grenada" src="{{static('img/home4.webp')}}">
+            <div class="gallery__caption">St. George's, Grenada</div>
+        </div>
 
-  <div class="mySlides fade">
-    <div class="slides-numbertext">3 / 7</div>
-    <img class="resizable" alt="Mission Dolores Park, San Francisco, CA" src="{{static('img/home1.webp')}}">
-    <div class="slides-caption">Mission Dolores Park, San Francisco, CA</div>
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="slides-numbertext">4 / 7</div>
-    <img class="resizable" alt="Old San Juan, Puerto Rico" src="{{static('img/home2.webp')}}">
-    <div class="slides-caption">Old San Juan, Puerto Rico</div>
-  </div>
+        <div class="gallery__slide">
+            <img class="gallery__image" alt="Cozumel, Mexico" src="{{static('img/home5.webp')}}">
+            <div class="gallery__caption">Cozumel, Mexico</div>
+        </div>
 
-  <div class="mySlides fade">
-    <div class="slides-numbertext">5 / 7</div>
-    <img class="resizable" alt="Jogyesa, Seoul, South Korea" src="{{static('img/home3.webp')}}">
-    <div class="slides-caption">Jogyesa, Seoul, South Korea</div>
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="slides-numbertext">6 / 7</div>
-    <img class="resizable" alt="St. George's, Grenada" src="{{static('img/home4.webp')}}">
-    <div class="slides-caption">St. George's, Grenada</div>
-  </div>
+        <button class="gallery__nav gallery__nav--prev" onclick="plusSlides(-1)" aria-label="Previous slide">❮</button>
+        <button class="gallery__nav gallery__nav--next" onclick="plusSlides(1)" aria-label="Next slide">❯</button>
+    </div>
 
-  <div class="mySlides fade">
-    <div class="slides-numbertext">7 / 7</div>
-    <img class="resizable" alt="Cozumel, Mexico" src="{{static('img/home5.webp')}}">
-    <div class="slides-caption">Cozumel, Mexico</div>
-  </div>
-
-
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  </div>
-  <br>
-
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-    <span class="dot" onclick="currentSlide(4)"></span> 
-    <span class="dot" onclick="currentSlide(5)"></span> 
-    <span class="dot" onclick="currentSlide(6)"></span> 
-    <span class="dot" onclick="currentSlide(7)"></span> 
-  </div>
-</p>
-{% endblock%}
+    <div class="gallery__dots">
+        <button class="gallery__dot is-active" onclick="currentSlide(1)" aria-label="Go to slide 1"></button>
+        <button class="gallery__dot" onclick="currentSlide(2)" aria-label="Go to slide 2"></button>
+        <button class="gallery__dot" onclick="currentSlide(3)" aria-label="Go to slide 3"></button>
+        <button class="gallery__dot" onclick="currentSlide(4)" aria-label="Go to slide 4"></button>
+        <button class="gallery__dot" onclick="currentSlide(5)" aria-label="Go to slide 5"></button>
+        <button class="gallery__dot" onclick="currentSlide(6)" aria-label="Go to slide 6"></button>
+        <button class="gallery__dot" onclick="currentSlide(7)" aria-label="Go to slide 7"></button>
+    </div>
+</section>
+{% endblock %}

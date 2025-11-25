@@ -1,52 +1,54 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<div class="container-fluid">
-  <div class="container-fluid">
+<article class="about-intro">
+    <header class="about-intro__header">
+        <h1 class="about-intro__title">Stats</h1>
+    </header>
 
-    <!-- Begin stats pannel -->
-    <div class="jumbotron container-fluid" style="background-color:#E4E5E9">
-      <div class="jumbotron-contents">
-        <center><h3>Stats</h3></center>
-        <h2>Eli is currently writing {{ exes_list[-1][1] }} times as much code as when he started.*</h2>
+    <div class="about-content prose">
+        <h2 class="mt-0">Eli is currently writing {{ exes_list[-1][1] }} times as much code as when he started.*</h2>
+        
         <p>
-          Let x equal the average number of commits per week in the first quarter of Eli's professional
-          career. From there, you can calculate how many times more productive he has become.
-          This calculation is done in search of the fabled "10x engineer," the engineer who
-          can operate at an order of magnitude more than the average operational capacity.
-          Note there is no universally aggreed upon way to calculate this
-          <a href="https://news.ycombinator.com/item?id=10958579">mythical number</a> and
-          this is more of a fun exercise to learn a charting library. In other words,
-          don't take this number too seriously.
-          <br><br>
-          Below you can see charts of the values I used along the way to calculate this.
+            Let x equal the average number of commits per week in the first quarter of Eli's professional
+            career. From there, you can calculate how many times more productive he has become.
+            This calculation is done in search of the fabled "10x engineer," the engineer who
+            can operate at an order of magnitude more than the average operational capacity.
+            Note there is no universally agreed upon way to calculate this
+            <a href="https://news.ycombinator.com/item?id=10958579">mythical number</a> and
+            this is more of a fun exercise to learn a charting library. In other words,
+            don't take this number too seriously.
         </p>
-        {% column_chart exes_list with library={"backgroundColor": "#E4E5E9"}%}
-        <br>
+        
         <p>
-          Total commits per week
+            Below you can see charts of the values I used along the way to calculate this.
         </p>
-        {% line_chart commits_by_date with library={"backgroundColor": "#E4E5E9"}%}
-        <br>
-        <p>
-          Total commits per quarter
+        
+        {% column_chart exes_list with library={"backgroundColor": "transparent", "legend": {"textStyle": {"color": "#a8a29e"}}, "hAxis": {"textStyle": {"color": "#a8a29e"}}, "vAxis": {"textStyle": {"color": "#a8a29e"}}}%}
+        
+        <div class="divider"></div>
+        
+        <p><strong>Total commits per week</strong></p>
+        {% line_chart commits_by_date with library={"backgroundColor": "transparent", "legend": {"textStyle": {"color": "#a8a29e"}}, "hAxis": {"textStyle": {"color": "#a8a29e"}}, "vAxis": {"textStyle": {"color": "#a8a29e"}}, "colors": ["#22d3ee"]}%}
+        
+        <div class="divider"></div>
+        
+        <p><strong>Total commits per quarter</strong></p>
+        {% column_chart quarterly_totals with library={"backgroundColor": "transparent", "legend": {"textStyle": {"color": "#a8a29e"}}, "hAxis": {"textStyle": {"color": "#a8a29e"}}, "vAxis": {"textStyle": {"color": "#a8a29e"}}}%}
+        
+        <div class="divider"></div>
+        
+        <p><strong>Average weekly commits per quarter</strong></p>
+        {% column_chart quarterly_avgs with library={"backgroundColor": "transparent", "legend": {"textStyle": {"color": "#a8a29e"}}, "hAxis": {"textStyle": {"color": "#a8a29e"}}, "vAxis": {"textStyle": {"color": "#a8a29e"}}}%}
+        
+        <div class="divider"></div>
+        
+        <p class="text-muted">
+            * Number of commits is not an accurate metric for 'productivity.'
+            Furthermore, the idea of a 10x engineer is completely absurd. Also, this
+            asterisk was primarily intended to get you to scroll down and examine all of the charts.
+            It worked.
         </p>
-        {% column_chart quarterly_totals with library={"backgroundColor": "#E4E5E9"}%}
-        <br>
-        <p>
-          Average weekly commits per quarter
-        </p>
-        {% column_chart quarterly_avgs with library={"backgroundColor": "#E4E5E9"}%}
-        <br>
-        <p>
-          * Number of commits is not an accurate metric for 'productivity.'
-          Furthermore, the idea of a 10x engineer is completely absurd. Also, this
-          asterisk was primarily intended to get you to scroll down and examine all of the charts.
-          It worked.
-        </p>
-      </div>
     </div>
-    <!-- End stats panel -->
-  </div>
-</div>
+</article>
 {% endblock %}

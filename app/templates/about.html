@@ -1,105 +1,111 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h2 class="margined">about</h2>
-<p class="margined">
-  My name is Eli Hickox. I'm a software engineer based in the San Francisco Bay Area.
-  I spent three years studying Mathematics and Computer Science at The University of
-  Illinois at Urbana-Champaign before dropping out to join the systems team at RelateIQ,
-  which was acquired by Salesforce.
-</p>
-<p class="margined">
-  At RelateIQ, which later became <a href="https://en.wikipedia.org/wiki/SalesforceIQ">SalesforceIQ</a> and then Einstein, I worked on what would now be called predictive systems and automated intelligence. The whole premise was using data and signals to automatically capture and surface relationship intelligence that salespeople would normally have to manually track. I spent three years as a backend engineer building integrations like <a href="https://www.salesforce.com/products/sales-cloud/features/crm-email-connector/">Salesforce Inbox</a> and Automated Activity Capture. I built geolocation features for read receipts, the mobile news feed, and custom object support.
+<article class="about-intro">
+    <header class="about-intro__header">
+        <h1 class="about-intro__title">About</h1>
+    </header>
 
-  My most important work there was designing and implementing real-time content control systems for organizational activity timelines. This landed me two patents: <a href="https://patents.justia.com/patent/10686741" target="_blank">US Patent 10,686,741</a> (Method and System for Real-Time Blocking of Content from an Organization Activity Timeline, granted June 16, 2020) and <a href="https://patents.justia.com/patent/10719811" target="_blank">US Patent 10,719,811</a> (Method and System for Retroactive Removal of Content from an Organization Activity Timeline, granted July 21, 2020).   These systems use identifier-based blacklists to evaluate and filter activities in real time or retroactively. The same kind of high-throughput filtering and routing logic you see in modern AI systems.
+    <div class="about-content prose">
+        <p>
+            My name is <strong>Eli Hickox</strong>. I'm a software engineer based in the San Francisco Bay Area.
+            I spent three years studying Mathematics and Computer Science at The University of
+            Illinois at Urbana-Champaign before dropping out to join the systems team at RelateIQ,
+            which was acquired by Salesforce.
+        </p>
 
-  In my last year at Salesforce, I moved to their Networking and Security team. I learned AWS, Terraform, Chef, and the rest of the infrastructure toolkit. I built a Terraform as a Service prototype to unify the infrastructure of Salesforce's various acquisitions. I also deployed and maintained a PGP keyserver for commit signing across teams.
-</p>
-<p class="margined">
-  After Salesforce, I joined <a href="https://split.io">Split Software</a> as a backend engineer. I worked on <a href="https://www.split.io/blog/split-workspaces-managing-experiments-and-feature-flags-across-teams-and-projects-at-scale/">workspaces</a> and the event ingestion pipeline, which processed metrics at scale for A/B testing and feature flags. I built the <a href="https://www.split.io/blog/introducing-feature-monitoring/">Alerting and Monitoring</a> feature from the ground up. Split was all about data-driven decision making long before that became standard practice.
-</p>
-<p class="margined">
-  Next, I spent nearly a year as a full-stack engineer at <a href="https://www.lyric.com">Lyric Hospitality</a>. I worked on the <a href="https://en.wikipedia.org/wiki/Global_distribution_system">GDS</a> integration and affiliate tracking with sites like <a href="https://www.kayak.com/">KAYAK.com</a>. My biggest project was building a reservation optimization system using <a href="https://www.optaplanner.org/">Optaplanner</a> that increased unit availability by 8% across the entire inventory. I wrote the Terraform, the Java code, and everything in between. This was constraint optimization on real data, solving problems that standard algorithms couldn't handle. Unfortunately the pandemic hit and the company closed up shop like many others in hospitality.
-</p>
-<p class="margined">
-  I spent over two years at <a href="https://eaze.com">Eaze</a>, joining during the height of COVID when the cannabis delivery business was booming. I was brought on as a backend engineer to build the API Gateway for a new React Native driver app. From there I worked across the stack, including the <a href="https://www.metrc.com/">METRC</a> compliance systems that enabled Eaze's expansion into Michigan. My final role was Data Engineer on the Analytics team, where I modernized their Python infrastructure and helped establish best practices. 
-</p>
-<p class="margined">
-  At <a href="https://www.chainalysis.com/">Chainalysis</a> I spent nearly three years as a Senior Data Engineer on the Data Cloud team. I worked on the next-generation real-time blockchain ingestion system built on Databricks Delta Live Tables, implementing a massive-scale streaming join architecture that could handle chains with billions of transactions at low latency. I worked directly with Databricks Solutions Architects, using undocumented beta features to push the performance boundaries. I also maintained infrastructure for the Investigations API used by agencies like the IRS and FBI, and I built a beta pre-production environment to improve operational efficiency and compliance.
-</p>
-<p class="margined">
-  I'm currently a founding engineer at <a href="https://anysoft.app">AnySoft</a>, where we're building the future of enterprise software. I'm the infrastructure engineer on our small team, responsible for our multi-tenant Kubernetes architecture and cloud compliance. I also write application code when needed. My focus is building systems that let us scale and innovate safely without needing a massive team behind me.
-</p>
-<p class="margined">
-  This is my personal website which showcases my portfolio of personal projects and provides
-  links to my profiles on various websites. To see some of my projects, click
-  on <a href="{{url_for('projects')}}">PROJECTS</a>. Note that this is an incomplete list. The pace of software development is
-  rapid and I don't always have time to update my website. To see a <i>more complete</i> collection of
-  my projects, check out my GitHub, or GitLab. Although this is not a complete picture either as I do use several version control hosting platforms, including privately hosted ones.
-</p>
+        <p>
+            At RelateIQ, which later became <a href="https://en.wikipedia.org/wiki/SalesforceIQ">SalesforceIQ</a> and then Einstein, I worked on what would now be called predictive systems and automated intelligence. The whole premise was using data and signals to automatically capture and surface relationship intelligence that salespeople would normally have to manually track. I spent three years as a backend engineer building integrations like <a href="https://www.salesforce.com/products/sales-cloud/features/crm-email-connector/">Salesforce Inbox</a> and Automated Activity Capture. I built geolocation features for read receipts, the mobile news feed, and custom object support.
+        </p>
 
-<p class="centered icon-links">
-  <!-- LinkedIn -->
-  <a href="https://www.linkedin.com/in/elihickox/" title="LinkedIn" target="_blank">
-    <i class="fab fa-linkedin fa-2x"></i>
-  </a>
-  <!-- GitHub -->
-  <a href="https://github.com/ehickox/" title="GitHub" target="_blank">
-    <i class="fab fa-github fa-2x"></i>
-  </a>
-  <!-- GitLab -->
-  <a href="https://gitlab.com/ehickox/" title="GitLab" target="_blank">
-    <i class="fab fa-gitlab fa-2x"></i>
-  </a>
-  <!-- Email -->
-  <a href="mailto:eli@elihickox.com" title="Email">
-    <i class="fas fa-envelope fa-2x"></i>
-  </a>
-  <!-- Twitter (optional, add your handle) -->
-  <a href="https://x.com/elihickox" title="Twitter" target="_blank">
-    <i class="fab fa-x-twitter fa-2x"></i>
-  </a>
-  <!-- Ham Radio -->
-  <a href="https://elihickox.com/radio" title="Ham Radio" target="_blank">
-    <i class="fas fa-broadcast-tower fa-2x"></i>
-  </a>
-</p>
+        <p>
+            My most important work there was designing and implementing real-time content control systems for organizational activity timelines. This landed me two patents: <a href="https://patents.justia.com/patent/10686741" target="_blank">US Patent 10,686,741</a> (Method and System for Real-Time Blocking of Content from an Organization Activity Timeline, granted June 16, 2020) and <a href="https://patents.justia.com/patent/10719811" target="_blank">US Patent 10,719,811</a> (Method and System for Retroactive Removal of Content from an Organization Activity Timeline, granted July 21, 2020). These systems use identifier-based blacklists to evaluate and filter activities in real time or retroactively. The same kind of high-throughput filtering and routing logic you see in modern AI systems.
+        </p>
 
-<p class="centered resizable">
-  <div class="slideshow-container resizable">
+        <p>
+            In my last year at Salesforce, I moved to their Networking and Security team. I learned AWS, Terraform, Chef, and the rest of the infrastructure toolkit. I built a Terraform as a Service prototype to unify the infrastructure of Salesforce's various acquisitions. I also deployed and maintained a PGP keyserver for commit signing across teams.
+        </p>
 
-  <div class="mySlides fade">
-    <div class="slides-numbertext">1 / 4</div>
-    <img class="resizable" alt="a picture of Eli Hickox" src="{{static('img/me0.webp')}}">
-  </div>
+        <p>
+            After Salesforce, I joined <a href="https://split.io">Split Software</a> as a backend engineer. I worked on <a href="https://www.split.io/blog/split-workspaces-managing-experiments-and-feature-flags-across-teams-and-projects-at-scale/">workspaces</a> and the event ingestion pipeline, which processed metrics at scale for A/B testing and feature flags. I built the <a href="https://www.split.io/blog/introducing-feature-monitoring/">Alerting and Monitoring</a> feature from the ground up. Split was all about data-driven decision making long before that became standard practice.
+        </p>
 
-  <div class="mySlides fade">
-    <div class="slides-numbertext">2 / 4</div>
-    <img class="resizable" alt="a picture of Eli Hickox" src="{{static('img/me1.webp')}}">
-  </div>
-  
-  <div class="mySlides fade">
-    <div class="slides-numbertext">3 / 4</div>
-    <img class="resizable" alt="a picture of Eli Hickox" src="{{static('img/me2.webp')}}">
-  </div>
+        <p>
+            Next, I spent nearly a year as a full-stack engineer at <a href="https://www.lyric.com">Lyric Hospitality</a>. I worked on the <a href="https://en.wikipedia.org/wiki/Global_distribution_system">GDS</a> integration and affiliate tracking with sites like <a href="https://www.kayak.com/">KAYAK.com</a>. My biggest project was building a reservation optimization system using <a href="https://www.optaplanner.org/">Optaplanner</a> that increased unit availability by 8% across the entire inventory. I wrote the Terraform, the Java code, and everything in between. This was constraint optimization on real data, solving problems that standard algorithms couldn't handle. Unfortunately the pandemic hit and the company closed up shop like many others in hospitality.
+        </p>
 
-  <div class="mySlides fade">
-    <div class="slides-numbertext">4 / 4</div>
-    <img class="resizable" alt="a picture of Eli Hickox" src="{{static('img/me3.webp')}}">
-  </div>
+        <p>
+            I spent over two years at <a href="https://eaze.com">Eaze</a>, joining during the height of COVID when the cannabis delivery business was booming. I was brought on as a backend engineer to build the API Gateway for a new React Native driver app. From there I worked across the stack, including the <a href="https://www.metrc.com/">METRC</a> compliance systems that enabled Eaze's expansion into Michigan. My final role was Data Engineer on the Analytics team, where I modernized their Python infrastructure and helped establish best practices.
+        </p>
 
+        <p>
+            At <a href="https://www.chainalysis.com/">Chainalysis</a> I spent nearly three years as a Senior Data Engineer on the Data Cloud team. I worked on the next-generation real-time blockchain ingestion system built on Databricks Delta Live Tables, implementing a massive-scale streaming join architecture that could handle chains with billions of transactions at low latency. I worked directly with Databricks Solutions Architects, using undocumented beta features to push the performance boundaries. I also maintained infrastructure for the Investigations API used by agencies like the IRS and FBI, and I built a beta pre-production environment to improve operational efficiency and compliance.
+        </p>
 
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
+        <p>
+            I'm currently a founding engineer at <a href="https://anysoft.app">AnySoft</a>, where we're building the future of enterprise software. I'm the infrastructure engineer on our small team, responsible for our multi-tenant Kubernetes architecture and cloud compliance. I also write application code when needed. My focus is building systems that let us scale and innovate safely without needing a massive team behind me.
+        </p>
 
-  </div>
-  <br>
+        <div class="divider"></div>
 
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-    <span class="dot" onclick="currentSlide(4)"></span> 
-  </div>
-</p>
+        <p>
+            This is my personal website which showcases my portfolio of personal projects and provides
+            links to my profiles on various websites. To see some of my projects, check out the
+            <a href="{{url_for('projects')}}">Projects</a> page. Note that this is an incomplete list—the pace of software development is
+            rapid and I don't always have time to update my website. To see a more complete collection of
+            my projects, check out my GitHub or GitLab. Although even this is not a complete picture as I do use several version control hosting platforms, including privately hosted ones.
+        </p>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/elihickox/" title="LinkedIn" target="_blank" class="social-links__item">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/ehickox/" title="GitHub" target="_blank" class="social-links__item">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://gitlab.com/ehickox/" title="GitLab" target="_blank" class="social-links__item">
+            <i class="fab fa-gitlab"></i>
+        </a>
+        <a href="mailto:eli@elihickox.com" title="Email" class="social-links__item">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://x.com/elihickox" title="X (Twitter)" target="_blank" class="social-links__item">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+        <a href="https://elihickox.com/radio" title="Ham Radio" target="_blank" class="social-links__item">
+            <i class="fas fa-broadcast-tower"></i>
+        </a>
+    </div>
+
+    <section class="gallery">
+        <div class="gallery__container">
+            <div class="gallery__slide is-active">
+                <img class="gallery__image" alt="Eli Hickox" src="{{static('img/me0.webp')}}">
+            </div>
+
+            <div class="gallery__slide">
+                <img class="gallery__image" alt="Eli Hickox" src="{{static('img/me1.webp')}}">
+            </div>
+            
+            <div class="gallery__slide">
+                <img class="gallery__image" alt="Eli Hickox" src="{{static('img/me2.webp')}}">
+            </div>
+
+            <div class="gallery__slide">
+                <img class="gallery__image" alt="Eli Hickox" src="{{static('img/me3.webp')}}">
+            </div>
+
+            <button class="gallery__nav gallery__nav--prev" onclick="plusSlides(-1)" aria-label="Previous slide">❮</button>
+            <button class="gallery__nav gallery__nav--next" onclick="plusSlides(1)" aria-label="Next slide">❯</button>
+        </div>
+
+        <div class="gallery__dots">
+            <button class="gallery__dot is-active" onclick="currentSlide(1)" aria-label="Go to slide 1"></button>
+            <button class="gallery__dot" onclick="currentSlide(2)" aria-label="Go to slide 2"></button>
+            <button class="gallery__dot" onclick="currentSlide(3)" aria-label="Go to slide 3"></button>
+            <button class="gallery__dot" onclick="currentSlide(4)" aria-label="Go to slide 4"></button>
+        </div>
+    </section>
+</article>
 {% endblock %}

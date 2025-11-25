@@ -2,44 +2,54 @@
 
 {% block body %}
 {% if projects == None %}
-<div class="container-fluid">
-  <div class="container-fluid">
-    <div class="jumbotron container-fluid" style="background-color:#E4E5E9">
-      <div class="jumbotron-contents">
-	<h1>Under Construction!</h1>
-      </div>
+<header class="projects-header">
+    <div class="container">
+        <h1 class="projects-header__title">Collected Works</h1>
+        <p class="projects-header__subtitle">Under Construction</p>
     </div>
-  </div>
-</div>
+</header>
 {% else %}
-<!-- Begin Project Panel -->
-{% for project in projects %}
-<a href="#{{project.title}}"></a>
-<a name={{project.title}}></a>
-<div class="container-fluid">
-  <div class="container">
-  <div class="panel panel-default" style="background-color:#E4E5E9">
-    <div class="panel-heading" style="background-color:#8190A0">
-      <h3 class="panel-title"><center><b>{{project.title}}</b></center></h3>
+<header class="projects-header">
+    <div class="container">
+        <h1 class="projects-header__title">Collected Works</h1>
+        <p class="projects-header__subtitle">Literary works and creative writing</p>
     </div>
-    <div class="panel-body" style="background-color:#E4E5E9">
-      <div class="container-fluid">
-	<p>{{project.date}}</p>
-	<p>{{project.description|safe}}</p>
-	{% if project.link %}
-	<p><a href={{project.link}}>Go to {{project.title}}</a></p>
-	{% endif %}
-	{% if project.download %}
-  <p>Available for free via bittorrent. Please seed and share.</p>
-	<p><a href={{project.download}}>Torrent &#129522; Link</a></p>
-	{% endif %}
-	<p>© {{project.copywrite}}</p>
-      </div>
-    </div>
-  </div>
-  </div>
-</div>
-{% endfor %}
-<!-- End Project Panel -->
+</header>
+
+<section class="projects-grid">
+    {% for project in projects %}
+    <article class="project-card" id="{{project.title}}">
+        <header class="project-card__header">
+            <h2 class="project-card__title">{{project.title}}</h2>
+        </header>
+        
+        <p class="project-card__date">{{project.date}}</p>
+        
+        <div class="project-card__description">
+            {{project.description|safe}}
+        </div>
+        
+        <div class="project-card__links">
+            {% if project.link %}
+            <a href="{{project.link}}" class="project-card__link" target="_blank">
+                <i class="fas fa-external-link-alt"></i>
+                Visit
+            </a>
+            {% endif %}
+            
+            {% if project.download %}
+            <a href="{{project.download}}" class="project-card__link">
+                <i class="fas fa-magnet"></i>
+                Download (Torrent)
+            </a>
+            {% endif %}
+        </div>
+        
+        {% if project.copywrite %}
+        <p class="project-card__license">© {{project.copywrite}}</p>
+        {% endif %}
+    </article>
+    {% endfor %}
+</section>
 {% endif %}
 {% endblock %}
