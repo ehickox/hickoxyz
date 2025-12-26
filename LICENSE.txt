@@ -1,6 +1,6 @@
 The University of Illinois/NCSA Open Source License, or UIUC license:
 
-Copyright (c) 2015-2025 Eli Hickox.  All rights reserved.
+Copyright (c) 2015-2026 Eli Hickox.  All rights reserved.
 
 
 Developed by: Eli Hickox
