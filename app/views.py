@@ -677,7 +677,7 @@ def agent_skills_index():
             {
                 "name": skill_name,
                 "type": "skill-md",
-                "description": document.splitlines()[0].lstrip("# ").strip(),
+                "description": document.splitlines()[0].removeprefix("# ").strip(),
                 "url": absolute_url(f"/.well-known/agent-skills/{skill_name}/SKILL.md"),
                 "digest": f"sha256:{digest}",
             }
