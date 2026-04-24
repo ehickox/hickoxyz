@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<header class="projects-header">
+    <div class="container">
+        <h1 class="projects-header__title">API Documentation</h1>
+        <p class="projects-header__subtitle">Machine-readable discovery and a small read-only JSON API for agents</p>
+    </div>
+</header>
+
+<section class="projects-grid">
+    <article class="project-card">
+        <header class="project-card__header">
+            <h2 class="project-card__title">Public Endpoints</h2>
+            <p class="project-card__tagline">No authentication required</p>
+        </header>
+
+        <div class="project-card__description">
+            <ul>
+                {% for endpoint in public_endpoints %}
+                <li><strong>{{ endpoint.method }} {{ endpoint.path }}</strong> - {{ endpoint.description }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </article>
+
+    <article class="project-card">
+        <header class="project-card__header">
+            <h2 class="project-card__title">Discovery Endpoints</h2>
+            <p class="project-card__tagline">Published for crawlers, agents, and API tooling</p>
+        </header>
+
+        <div class="project-card__description">
+            <ul>
+                {% for endpoint in discovery_endpoints %}
+                <li><code>{{ endpoint }}</code></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </article>
+</section>
+{% endblock %}

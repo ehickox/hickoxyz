@@ -44,6 +44,7 @@ class LiteraryWork:
         self.title = title
         self.date = date
         self.description = description
+        self.download = download
         self.copywrite = copywrite
 
     def append_description(self, text=""):
