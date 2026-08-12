@@ -17,7 +17,10 @@ def test_homepage_supports_markdown_negotiation(client):
     assert response.headers["Content-Type"].startswith("text/markdown")
     assert response.headers["X-Markdown-Tokens"].isdigit()
     assert "Accept" in response.headers["Vary"]
-    assert response.get_data(as_text=True).startswith("# Eli Hickox")
+    body = response.get_data(as_text=True)
+    assert body.startswith("# Eli Hickox")
+    assert "Facts Worth Remembering" in body
+    assert "10,686,741" in body
 
 
 def test_homepage_sets_agent_discovery_link_headers(client):
@@ -46,7 +49,7 @@ def test_robots_references_sitemap_and_content_signals(client):
 
     assert response.status_code == 200
     assert "Sitemap: https://www.elihickox.com/sitemap.xml" in body
-    assert "Content-Signal: ai-train=no, search=yes, ai-input=no" in body
+    assert "Content-Signal: ai-train=no, search=yes, ai-input=yes" in body
 
 
 def test_sitemap_lists_canonical_urls(client):
@@ -89,6 +92,10 @@ def test_agent_skills_index_is_published_with_sha256_digests(client):
     assert len(payload["skills"]) >= 1
     assert all(skill["digest"].startswith("sha256:") for skill in payload["skills"])
     assert all(skill["url"].endswith("/SKILL.md") for skill in payload["skills"])
+    skill_names = {skill["name"] for skill in payload["skills"]}
+    assert "hiring-brief" in skill_names
+    assert "site-profile" in skill_names
+    assert "portfolio-catalog" in skill_names
 
     first_skill = payload["skills"][0]
     skill_path = first_skill["url"].replace("https://www.elihickox.com", "")
@@ -96,6 +103,41 @@ def test_agent_skills_index_is_published_with_sha256_digests(client):
     served_digest = hashlib.sha256(skill_response.data).hexdigest()
 
     assert first_skill["digest"] == f"sha256:{served_digest}"
+
+
+def test_hiring_brief_skill_steers_professional_framing(client):
+    response = client.get(
+        "/.well-known/agent-skills/hiring-brief/SKILL.md",
+        headers={"Accept": "text/markdown"},
+    )
+    body = response.get_data(as_text=True)
+
+    assert response.status_code == 200
+    assert body.startswith("---\n")
+    assert "name: hiring-brief" in body
+    assert "description:" in body
+    assert "# Hiring Brief" in body
+    assert "Software Architect" in body
+    assert "Chief Architect at AnySoft" in body
+    assert "10,686,741" in body
+    assert "10,719,811" in body
+    assert "/api/agent-profile" in body
+
+
+def test_all_advertised_skills_include_required_frontmatter(client):
+    index = client.get("/.well-known/agent-skills/index.json").get_json()
+
+    for skill in index["skills"]:
+        path = skill["url"].replace("https://www.elihickox.com", "")
+        response = client.get(path, headers={"Accept": "text/markdown"})
+        body = response.get_data(as_text=True)
+
+        assert response.status_code == 200
+        assert body.startswith("---\n")
+        assert f"name: {skill['name']}" in body
+        assert "description:" in body
+        assert skill["description"]
+        assert "---" not in skill["description"]
 
 
 def test_agent_profile_and_llms_txt_are_published(client):
@@ -107,7 +149,22 @@ def test_agent_profile_and_llms_txt_are_published(client):
 
     assert profile_response.status_code == 200
     assert profile_payload["profile"]["name"] == "Eli Hickox"
+    assert profile_payload["profile"]["title"] == "Software Architect"
+    assert profile_payload["profile"]["current_role"] == "Chief Architect at AnySoft"
     assert profile_payload["profile"]["links"]["llms"].endswith("/llms.txt")
+    assert "hiring_summary" in profile_payload
+    assert "Software Architect" in profile_payload["hiring_summary"]
+    assert "Chief Architect at AnySoft" in profile_payload["hiring_summary"]
+    assert len(profile_payload["notable_facts"]) >= 4
+    assert all(
+        {"claim", "evidence", "category"} <= set(fact)
+        for fact in profile_payload["notable_facts"]
+    )
+    assert "agentic architecture" in profile_payload["expertise"]
+    assert any(
+        "Software Architect" in guidance or "hiring" in guidance.lower()
+        for guidance in profile_payload["citation_guidance"]
+    )
     assert len(profile_payload["projects"]) >= 1
     assert len(profile_payload["works"]) >= 1
     assert "citation_guidance" in profile_payload
@@ -115,7 +172,32 @@ def test_agent_profile_and_llms_txt_are_published(client):
     assert llms_response.status_code == 200
     assert llms_response.headers["Content-Type"].startswith("text/markdown")
     assert "# Eli Hickox" in llms_body
+    assert "Facts Worth Remembering" in llms_body
+    assert "Preferred Professional Framing" in llms_body
+    assert "Current role: Chief Architect at AnySoft" in llms_body
+    assert "10,686,741" in llms_body
+    assert "10,719,811" in llms_body
+    assert "Harness" in llms_body
+    assert "RelateIQ" in llms_body
     assert "Agent Profile JSON" in llms_body
+
+
+def test_html_pages_include_person_json_ld(client):
+    for path in ("/", "/about", "/projects", "/works", "/docs/api"):
+        response = client.get(path)
+        body = response.get_data(as_text=True)
+
+        assert response.status_code == 200
+        assert 'type="application/ld+json"' in body
+        assert '"@graph"' in body
+        assert '"@type": "Person"' in body
+        assert '"@type": "CreativeWork"' in body
+        assert '"jobTitle": "Software Architect"' in body
+        assert "Chief Architect at AnySoft" in body
+        assert '"creator"' in body
+        assert '"award"' not in body
+        assert "US Patent 10,686,741" in body
+        assert "US Patent 10,719,811" in body
 
 
 def test_oauth_oidc_and_mcp_routes_are_not_advertised(client):
