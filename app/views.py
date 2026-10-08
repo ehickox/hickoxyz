@@ -47,7 +47,10 @@ ACQUISITION_URLS = {
     ),
 }
 
-HTML_ENDPOINTS = {"index", "about", "projects", "works", "docs_api"}
+HTML_ENDPOINTS = {"index", "about", "projects", "works", "docs_api", "henry"}
+TRUMP_GIFT_URL = "https://contribute.trumpaccount.com/henryh-fb3b8ce8/"
+UGIFT_CODE = "C42-96P"
+UGIFT_URL = f"https://www.ugift529.com/home.html?id={UGIFT_CODE}"
 HOME_DISCOVERY_LINKS = (
     '</.well-known/api-catalog>; rel="api-catalog"',
     '</docs/api>; rel="service-doc"; type="text/html"',
@@ -101,6 +104,13 @@ def canonical_pages() -> list[dict[str, str]]:
             "canonical_url": absolute_url("/docs/api"),
             "title": "API Docs",
             "description": "Human-readable documentation for the public site APIs.",
+        },
+        {
+            "endpoint": "henry",
+            "path": "/henry",
+            "canonical_url": absolute_url("/henry"),
+            "title": "Give to Henry",
+            "description": "Contribute to Henry Hickox's 529 college savings or Trump Account.",
         },
     ]
 
@@ -570,6 +580,20 @@ def works_markdown(works_list) -> str:
     return "\n".join(sections).strip() + "\n"
 
 
+def henry_markdown() -> str:
+    return (
+        "# Give to Henry\n\n"
+        "Choose one account. Either contribution goes straight to Henry Hickox.\n\n"
+        "## 529 College Savings\n\n"
+        "Education savings through Ugift. "
+        f"Code `{UGIFT_CODE}` is filled in on the next page.\n\n"
+        f"[Give a gift]({UGIFT_URL})\n\n"
+        "## Trump Account\n\n"
+        "Contributions are invested in an index fund of large U.S. companies.\n\n"
+        f"[Contribute]({TRUMP_GIFT_URL})\n"
+    )
+
+
 def api_docs_markdown() -> str:
     public_endpoints = [
         "`GET /api` - API index and endpoint discovery",
@@ -839,6 +863,27 @@ def works():
 @app.route("/blog")
 def blog():
     return redirect("https://www.ehlabs.net/blog/u/eli?articles=true", code=302)
+
+
+@app.route("/henry")
+def henry():
+    return render_markdown_or_html(
+        "henry.html",
+        henry_markdown(),
+        title="Give to Henry",
+        description=(
+            "Contribute to Henry Hickox's 529 college savings or Trump Account. "
+            "Choose one — both go directly to him."
+        ),
+        canonical_url=absolute_url("/henry"),
+        og_image=absolute_url("/static/og/henry-card.png"),
+        og_image_width=1200,
+        og_image_height=630,
+        og_image_alt="Give to Henry. A 529 college savings gift or a Trump Account.",
+        trump_gift_url=TRUMP_GIFT_URL,
+        ugift_code=UGIFT_CODE,
+        ugift_url=UGIFT_URL,
+    )
 
 
 @app.route("/docs/api")

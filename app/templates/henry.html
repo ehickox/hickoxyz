@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<section class="gift">
+    <div class="container">
+        <header class="gift__intro">
+            <p class="gift__eyebrow">Henry Hickox</p>
+            <h1 class="gift__title">Give to Henry</h1>
+            <p class="gift__lede">Choose one account. Either gift goes directly to him.</p>
+        </header>
+
+        <div class="gift__grid">
+            <article class="gift-card">
+                <p class="gift-card__kicker">529 College Savings</p>
+                <h2 class="gift-card__title">Save for his education</h2>
+                <p class="gift-card__text">Opens Ugift with Henry’s code already filled in.</p>
+                <a class="gift-card__button" href="{{ ugift_url }}">Give a gift</a>
+                <div class="gift-code">
+                    <span class="gift-code__value">{{ ugift_code }}</span>
+                    <button type="button" class="gift-code__copy" data-copy="{{ ugift_code }}">
+                        <span data-copy-label>Copy</span>
+                    </button>
+                </div>
+                <figure class="gift-card__scan">
+                    <a class="gift-card__qr" href="{{ ugift_url }}" aria-label="QR code for Henry's 529 on Ugift">
+                        <img src="{{ static('qr/henry-529.svg') }}" alt="" width="168" height="168">
+                    </a>
+                    <figcaption>Scan with your phone</figcaption>
+                </figure>
+            </article>
+
+            <article class="gift-card">
+                <p class="gift-card__kicker">Trump Account</p>
+                <h2 class="gift-card__title">Invest for his future</h2>
+                <p class="gift-card__text">Contributions are invested in an index fund of large U.S. companies.</p>
+                <a class="gift-card__button" href="{{ trump_gift_url }}">Contribute</a>
+                <figure class="gift-card__scan">
+                    <a class="gift-card__qr" href="{{ trump_gift_url }}" aria-label="QR code for Henry's Trump Account">
+                        <img src="{{ static('qr/henry-trump.svg') }}" alt="" width="168" height="168">
+                    </a>
+                    <figcaption>Scan with your phone</figcaption>
+                </figure>
+            </article>
+        </div>
+
+        <p class="gift__note">You choose the amount on the next page. Payment details stay there, not on this site.</p>
+    </div>
+</section>
+<script>
+document.querySelectorAll("[data-copy]").forEach(function (button) {
+    button.addEventListener("click", async function () {
+        var value = button.getAttribute("data-copy");
+        var label = button.querySelector("[data-copy-label]");
+        var original = label.textContent;
+        try {
+            await navigator.clipboard.writeText(value);
+        } catch (error) {
+            var field = document.createElement("textarea");
+            field.value = value;
+            document.body.appendChild(field);
+            field.select();
+            document.execCommand("copy");
+            field.remove();
+        }
+        label.textContent = "Copied";
+        window.setTimeout(function () {
+            label.textContent = original;
+        }, 1600);
+    });
+});
+</script>
+{% endblock %}

@@ -1064,3 +1064,248 @@ samp, code {
     height: 44px;
   }
 }
+
+/* ============================================
+   HENRY GIFT PAGE
+   ============================================ */
+.gift {
+  padding: var(--space-3xl) 0 var(--space-4xl);
+}
+
+.gift__intro {
+  max-width: 36rem;
+  margin: 0 auto var(--space-3xl);
+  text-align: center;
+}
+
+.gift__eyebrow {
+  margin-bottom: var(--space-md);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.gift__title {
+  margin-bottom: var(--space-md);
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.05;
+}
+
+.gift__lede {
+  margin-bottom: 0;
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+}
+
+.gift__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl);
+  align-items: stretch;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.gift-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-2xl) var(--space-xl);
+  text-align: center;
+  background:
+    linear-gradient(var(--color-accent), var(--color-accent)) top / 100% 2px no-repeat,
+    var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+}
+
+.gift-card__kicker {
+  margin-bottom: var(--space-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.gift-card__title {
+  margin-bottom: var(--space-sm);
+  font-size: clamp(1.75rem, 3vw, 2.15rem);
+}
+
+.gift-card__text {
+  max-width: 28rem;
+  min-height: 3.4em;
+  margin-bottom: var(--space-xl);
+  color: var(--color-text-secondary);
+}
+
+.gift-card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 18rem;
+  min-height: 3.25rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #1a1404;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background var(--transition-fast);
+}
+
+.gift-card__button:hover,
+.gift-card__button:focus-visible {
+  background: var(--color-accent-hover);
+  color: #1a1404;
+}
+
+.gift-card__button:focus-visible,
+.gift-code__copy:focus-visible,
+.gift-card__qr:focus-visible {
+  outline: 2px solid var(--color-text-primary);
+  outline-offset: 3px;
+}
+
+.gift-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 18rem;
+  margin: var(--space-md) 0 0;
+  padding: 0.35rem 0.35rem 0.35rem 0.9rem;
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border-light);
+  border-radius: 999px;
+}
+
+.gift-code__value {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--color-text-primary);
+  background: transparent;
+  padding: 0;
+  user-select: all;
+}
+
+.gift-code__copy {
+  flex: 0 0 auto;
+  min-width: 4.5rem;
+  min-height: 2.5rem;
+  padding: 0.4rem 0.9rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.gift-code__copy:hover {
+  background: var(--color-border-light);
+}
+
+.gift-card__scan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: auto;
+  padding-top: var(--space-xl);
+}
+
+.gift-card__scan figcaption {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.gift-card__qr {
+  display: block;
+  padding: 10px;
+  line-height: 0;
+  background: #fff;
+  border-radius: 14px;
+}
+
+.gift-card__qr img {
+  display: block;
+  width: 168px;
+  height: 168px;
+}
+
+.gift__note {
+  max-width: 36rem;
+  margin: var(--space-2xl) auto 0;
+  text-align: center;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 768px) {
+  .gift {
+    padding-top: var(--space-2xl);
+  }
+
+  .gift__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .gift-card {
+    padding: var(--space-xl) var(--space-lg);
+  }
+
+  .gift-card__button,
+  .gift-code {
+    max-width: none;
+  }
+}
+
+@media print {
+  .nav,
+  .footer,
+  .gift-code__copy,
+  .gift__note {
+    display: none;
+  }
+
+  body,
+  body::before {
+    background: #fff;
+    color: #111;
+  }
+
+  .gift-card {
+    break-inside: avoid;
+    box-shadow: none;
+    background: #fff;
+    color: #111;
+  }
+
+  .gift__title,
+  .gift-card__title,
+  .gift-code__value {
+    color: #111;
+  }
+
+  .gift-card__text,
+  .gift__lede,
+  .gift-card__scan figcaption {
+    color: #333;
+  }
+}

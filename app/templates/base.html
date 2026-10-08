@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if title %}{{title}}{% else %}{{ default_page_title or "Eli Hickox — Software Architect" }}{% endif %}</title>
-    <meta name="description" content="{{ site_description or "Software Architect based in the San Francisco Bay Area, specializing in agentic architecture, AI infrastructure, and scalable systems. Named inventor on two US patents; currently Chief Architect at AnySoft." }}">
+    <meta name="description" content="{{ description or site_description or "Software Architect based in the San Francisco Bay Area, specializing in agentic architecture, AI infrastructure, and scalable systems. Named inventor on two US patents; currently Chief Architect at AnySoft." }}">
     <meta name="author" content="Eli Hickox">
     <meta name="robots" content="INDEX, FOLLOW">
     <meta name="keywords" content="eli hickox, chief architect, software architect, software engineer, university of illinois, salesforce, salesforceiq, relateiq, split software, split.io, anysoft, anysoft.app, data engineer, backend engineer, agentic architecture, AI infrastructure, patents">
@@ -12,9 +12,22 @@
     
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="{% if title %}{{title}}{% else %}{{ default_page_title or "Eli Hickox — Software Architect" }}{% endif %}">
-    <meta property="og:description" content="{{ site_description or "Software Architect based in the San Francisco Bay Area, specializing in agentic architecture, AI infrastructure, and scalable systems. Named inventor on two US patents; currently Chief Architect at AnySoft." }}">
+    <meta property="og:description" content="{{ description or site_description or "Software Architect based in the San Francisco Bay Area, specializing in agentic architecture, AI infrastructure, and scalable systems. Named inventor on two US patents; currently Chief Architect at AnySoft." }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.elihickox.com">
+    <meta property="og:url" content="{{ canonical_url or 'https://www.elihickox.com' }}">
+    {% if og_image %}
+    <meta property="og:image" content="{{ og_image }}">
+    <meta property="og:image:secure_url" content="{{ og_image }}">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="{{ og_image_width or 1200 }}">
+    <meta property="og:image:height" content="{{ og_image_height or 630 }}">
+    <meta property="og:image:alt" content="{{ og_image_alt or title }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ description }}">
+    <meta name="twitter:image" content="{{ og_image }}">
+    <meta name="twitter:image:alt" content="{{ og_image_alt or title }}">
+    {% endif %}
     <link rel="canonical" href="{{ canonical_url or request.base_url }}">
 
     {% if person_json_ld %}

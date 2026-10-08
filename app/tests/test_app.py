@@ -62,6 +62,7 @@ def test_sitemap_lists_canonical_urls(client):
     assert "<loc>https://www.elihickox.com/projects</loc>" in body
     assert "<loc>https://www.elihickox.com/works</loc>" in body
     assert "<loc>https://www.elihickox.com/docs/api</loc>" in body
+    assert "<loc>https://www.elihickox.com/henry</loc>" in body
 
 
 def test_api_catalog_is_published_as_linkset_json(client):
@@ -198,6 +199,40 @@ def test_html_pages_include_person_json_ld(client):
         assert '"award"' not in body
         assert "US Patent 10,686,741" in body
         assert "US Patent 10,719,811" in body
+
+
+def test_henry_gift_page_offers_both_accounts(client):
+    response = client.get("/henry")
+    body = response.get_data(as_text=True)
+
+    assert response.status_code == 200
+    assert "Give to Henry" in body
+    grid = body.split('class="gift__grid"', 1)[1]
+    assert grid.find("529 College Savings") < grid.find("Trump Account")
+    assert 'property="og:image"' in body
+    assert "https://www.elihickox.com/static/og/henry-card.png" in body
+    assert 'name="twitter:card" content="summary_large_image"' in body
+    assert "https://contribute.trumpaccount.com/henryh-fb3b8ce8/" in body
+    assert "C42-96P" in body
+    assert "https://www.ugift529.com/home.html?id=C42-96P" in body
+    assert "/static/qr/henry-trump.svg" in body
+    assert "/static/qr/henry-529.svg" in body
+
+    trump_qr = client.get("/static/qr/henry-trump.svg")
+    ugift_qr = client.get("/static/qr/henry-529.svg")
+    social_card = client.get("/static/og/henry-card.png")
+    assert trump_qr.status_code == 200
+    assert trump_qr.mimetype == "image/svg+xml"
+    assert ugift_qr.status_code == 200
+    assert social_card.status_code == 200
+    assert social_card.mimetype == "image/png"
+
+    markdown = client.get("/henry", headers={"Accept": "text/markdown"})
+    markdown_body = markdown.get_data(as_text=True)
+    assert markdown.status_code == 200
+    assert markdown.headers["Content-Type"].startswith("text/markdown")
+    assert "C42-96P" in markdown_body
+    assert "contribute.trumpaccount.com/henryh-fb3b8ce8" in markdown_body
 
 
 def test_oauth_oidc_and_mcp_routes_are_not_advertised(client):
