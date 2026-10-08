@@ -873,7 +873,7 @@ def henry():
         title="Give to Henry",
         description="Contribute to Henry Hickox's 529 college savings or Trump Account.",
         canonical_url=absolute_url("/henry"),
-        og_image=absolute_url("/static/og/henry-card.png"),
+        og_image=absolute_url("/static/og/henry-card.png?v=2"),
         og_image_width=1200,
         og_image_height=630,
         og_image_alt="Give to Henry. A 529 college savings gift or a Trump Account.",
