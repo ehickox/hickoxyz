@@ -871,10 +871,7 @@ def henry():
         "henry.html",
         henry_markdown(),
         title="Give to Henry",
-        description=(
-            "Contribute to Henry Hickox's 529 college savings or Trump Account. "
-            "Choose one — both go directly to him."
-        ),
+        description="Contribute to Henry Hickox's 529 college savings or Trump Account.",
         canonical_url=absolute_url("/henry"),
         og_image=absolute_url("/static/og/henry-card.png"),
         og_image_width=1200,
