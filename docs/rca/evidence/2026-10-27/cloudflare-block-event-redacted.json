@@ -1,0 +1,15 @@
+{
+  "source": "Authenticated Cloudflare Security Events UI, service=bic",
+  "timestamp_utc": "2026-10-27T21:10:32Z",
+  "service": "Browser integrity check",
+  "action": "Block",
+  "ray_id": "a514b026cd4c3884",
+  "user_agent": "Python-urllib/3.11",
+  "http_version": "HTTP/2",
+  "method": "GET",
+  "host": "www.elihickox.com",
+  "path": "/sitemap.xml",
+  "query": "",
+  "client_ip": "REDACTED",
+  "note": "Client IP and unrelated traffic omitted from the public evidence record. Raw authenticated UI capture retained locally for the investigation."
+}

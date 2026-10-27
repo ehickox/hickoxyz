@@ -1,0 +1,56 @@
+[
+  {
+    "path": "/settings/browser_check",
+    "status": 200,
+    "data": {
+      "result": {
+        "id": "browser_check",
+        "value": "on",
+        "modified_on": null,
+        "editable": true
+      },
+      "success": true,
+      "errors": [],
+      "messages": []
+    }
+  },
+  {
+    "path": "/rulesets/phases/http_request_firewall_custom/entrypoint",
+    "status": 200,
+    "data": {
+      "result": {
+        "description": "",
+        "id": "31f6604b02f748778cd8298db9621aeb",
+        "kind": "zone",
+        "last_updated": "2026-10-27T21:14:44.01036Z",
+        "name": "default",
+        "phase": "http_request_firewall_custom",
+        "rules": [
+          {
+            "action": "skip",
+            "action_parameters": {
+              "products": [
+                "bic"
+              ]
+            },
+            "description": "Public agent discovery - skip BIC only",
+            "enabled": true,
+            "expression": "(http.host in {\"elihickox.com\" \"www.elihickox.com\"} and http.request.method in {\"GET\" \"HEAD\"} and http.request.uri.path in {\"/\" \"/.well-known/agent-skills/hiring-brief/SKILL.md\" \"/.well-known/agent-skills/index.json\" \"/.well-known/agent-skills/portfolio-catalog/SKILL.md\" \"/.well-known/agent-skills/site-profile/SKILL.md\" \"/.well-known/api-catalog\" \"/api\" \"/api/agent-profile\" \"/api/profile\" \"/api/projects\" \"/api/works\" \"/docs/api\" \"/healthz\" \"/llms.txt\" \"/openapi.json\" \"/robots.txt\" \"/sitemap.xml\"})",
+            "id": "8adccf26f52a431eb3c63d8046de12eb",
+            "last_updated": "2026-10-27T21:14:44.01036Z",
+            "logging": {
+              "enabled": true
+            },
+            "ref": "8adccf26f52a431eb3c63d8046de12eb",
+            "version": "1"
+          }
+        ],
+        "source": "firewall_custom",
+        "version": "1"
+      },
+      "success": true,
+      "errors": [],
+      "messages": []
+    }
+  }
+]

@@ -1,0 +1,1570 @@
+[
+  {
+    "host": "elihickox.com",
+    "path": "/robots.txt",
+    "family": 6,
+    "id": "2cF9bM4X3MEofXyhP00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 40,
+          "dns": 11,
+          "tcp": 2,
+          "tls": 14,
+          "firstByte": 12,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/plain; charset=utf-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Taipei",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 474,
+          "dns": 72,
+          "tcp": 5,
+          "tls": 12,
+          "firstByte": 384,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/plain; charset=utf-8"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/api",
+    "family": 6,
+    "id": "28hIda4rlaqkUeWWz00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 207,
+          "dns": 2,
+          "tcp": 2,
+          "tls": 9,
+          "firstByte": 193,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 136,
+          "dns": 37,
+          "tcp": 11,
+          "tls": 23,
+          "firstByte": 64,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/api/profile",
+    "family": 6,
+    "id": "2lCadrkAT0k1223VT00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 212,
+          "dns": 0,
+          "tcp": 2,
+          "tls": 13,
+          "firstByte": 196,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 159,
+          "dns": 37,
+          "tcp": 19,
+          "tls": 26,
+          "firstByte": 76,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/api/projects",
+    "family": 6,
+    "id": "2G5FCK1gjkGIYV1xc00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 220,
+          "dns": 4,
+          "tcp": 2,
+          "tls": 10,
+          "firstByte": 191,
+          "download": 13
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 176,
+          "dns": 33,
+          "tcp": 26,
+          "tls": 37,
+          "firstByte": 78,
+          "download": 2
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/api/works",
+    "family": 6,
+    "id": "2uHVwvY6KCP6G3Lse00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 203,
+          "dns": 0,
+          "tcp": 2,
+          "tls": 10,
+          "firstByte": 191,
+          "download": 0
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 131,
+          "dns": 1,
+          "tcp": 19,
+          "tls": 39,
+          "firstByte": 71,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/healthz",
+    "family": 6,
+    "id": "2JbPIxEdyxQXXOFMz00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 385,
+          "dns": 9,
+          "tcp": 2,
+          "tls": 12,
+          "firstByte": 362,
+          "download": 0
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Taipei",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 263,
+          "dns": 2,
+          "tcp": 4,
+          "tls": 13,
+          "firstByte": 243,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/.well-known/api-catalog",
+    "family": 6,
+    "id": "28zUL2WnIwpg8QDxX00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 215,
+          "dns": 1,
+          "tcp": 1,
+          "tls": 12,
+          "firstByte": 200,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/linkset+json; profile=\"https://www.rfc-editor.org/info/rfc9727\""
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 132,
+          "dns": 1,
+          "tcp": 26,
+          "tls": 35,
+          "firstByte": 70,
+          "download": 0
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/linkset+json; profile=\"https://www.rfc-editor.org/info/rfc9727\""
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/.well-known/agent-skills/index.json",
+    "family": 6,
+    "id": "2jWTmrA4dSuvOTL1I00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 207,
+          "dns": 1,
+          "tcp": 2,
+          "tls": 12,
+          "firstByte": 190,
+          "download": 2
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 95,
+          "dns": 1,
+          "tcp": 13,
+          "tls": 23,
+          "firstByte": 57,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/json"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/sitemap.xml",
+    "family": 6,
+    "id": "2kPbqkzuaDDCzcAkz00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 243,
+          "dns": 6,
+          "tcp": 2,
+          "tls": 22,
+          "firstByte": 205,
+          "download": 8
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/xml; charset=utf-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Taipei",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 259,
+          "dns": 2,
+          "tcp": 4,
+          "tls": 10,
+          "firstByte": 242,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "application/xml; charset=utf-8"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/docs/api",
+    "family": 6,
+    "id": "2C0fiQC4zLLXttYdJ00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 240,
+          "dns": 1,
+          "tcp": 1,
+          "tls": 13,
+          "firstByte": 203,
+          "download": 22
+        },
+        "truncated": true,
+        "location": null,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 120,
+          "dns": 2,
+          "tcp": 13,
+          "tls": 29,
+          "firstByte": 75,
+          "download": 1
+        },
+        "truncated": true,
+        "location": null,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/.well-known/agent-skills/site-profile/SKILL.md",
+    "family": 6,
+    "id": "2MwQEHKLFvR40UWEk00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 220,
+          "dns": 1,
+          "tcp": 1,
+          "tls": 14,
+          "firstByte": 203,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 143,
+          "dns": 1,
+          "tcp": 24,
+          "tls": 34,
+          "firstByte": 81,
+          "download": 3
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/markdown; charset=utf-8"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/.well-known/agent-skills/portfolio-catalog/SKILL.md",
+    "family": 6,
+    "id": "2C1uwoDIopyDhTmNQ00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 235,
+          "dns": 0,
+          "tcp": 2,
+          "tls": 17,
+          "firstByte": 216,
+          "download": 0
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 177,
+          "dns": 1,
+          "tcp": 34,
+          "tls": 42,
+          "firstByte": 99,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/markdown; charset=utf-8"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/.well-known/agent-skills/hiring-brief/SKILL.md",
+    "family": 6,
+    "id": "2qSeHIQtIefvcJHws00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 199,
+          "dns": 0,
+          "tcp": 3,
+          "tls": 12,
+          "firstByte": 183,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 200,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 139,
+          "dns": 43,
+          "tcp": 11,
+          "tls": 25,
+          "firstByte": 59,
+          "download": 1
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/markdown; charset=utf-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/robots.txt",
+    "family": 6,
+    "id": "2eTGYpxCI9pDadm8700021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 42,
+          "dns": 1,
+          "tcp": 2,
+          "tls": 13,
+          "firstByte": 26,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/robots.txt",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 184,
+          "dns": 48,
+          "tcp": 32,
+          "tls": 39,
+          "firstByte": 65,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/robots.txt",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/api",
+    "family": 6,
+    "id": "27mpbXiFWgnIOvYh100021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 48,
+          "dns": 1,
+          "tcp": 2,
+          "tls": 16,
+          "firstByte": 29,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/api",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 106,
+          "dns": 37,
+          "tcp": 12,
+          "tls": 25,
+          "firstByte": 32,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/api",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/api/profile",
+    "family": 6,
+    "id": "2ASDPHtaWhHGXYjiy00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 45,
+          "dns": 7,
+          "tcp": 2,
+          "tls": 10,
+          "firstByte": 26,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/api/profile",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 97,
+          "dns": 1,
+          "tcp": 25,
+          "tls": 39,
+          "firstByte": 32,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/api/profile",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/api/projects",
+    "family": 6,
+    "id": "233UOtG4LyXHtkpnF00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 21,
+          "dns": 1,
+          "tcp": 2,
+          "tls": 9,
+          "firstByte": 9,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/api/projects",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 178,
+          "dns": 28,
+          "tcp": 35,
+          "tls": 48,
+          "firstByte": 67,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/api/projects",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/api/works",
+    "family": 6,
+    "id": "2MvapefBUzHVNew7100021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 39,
+          "dns": 11,
+          "tcp": 2,
+          "tls": 10,
+          "firstByte": 16,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/api/works",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 92,
+          "dns": 2,
+          "tcp": 25,
+          "tls": 33,
+          "firstByte": 32,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/api/works",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/healthz",
+    "family": 6,
+    "id": "22SyQpPJAnE7e1W1Q00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 33,
+          "dns": 0,
+          "tcp": 4,
+          "tls": 10,
+          "firstByte": 19,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/healthz",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 60,
+          "dns": 2,
+          "tcp": 11,
+          "tls": 19,
+          "firstByte": 28,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/healthz",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/.well-known/api-catalog",
+    "family": 6,
+    "id": "2DYhW3ymw5N4tyUXx00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 29,
+          "dns": 0,
+          "tcp": 2,
+          "tls": 9,
+          "firstByte": 18,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/api-catalog",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 75,
+          "dns": 1,
+          "tcp": 11,
+          "tls": 26,
+          "firstByte": 37,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/api-catalog",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/.well-known/agent-skills/index.json",
+    "family": 6,
+    "id": "2hIsCad1HhK7pl98m00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 18,
+          "dns": 0,
+          "tcp": 2,
+          "tls": 11,
+          "firstByte": 5,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/agent-skills/index.json",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 60,
+          "dns": 2,
+          "tcp": 11,
+          "tls": 22,
+          "firstByte": 24,
+          "download": 1
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/agent-skills/index.json",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/sitemap.xml",
+    "family": 6,
+    "id": "2ov4zhkewLFE54by600021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 49,
+          "dns": 12,
+          "tcp": 3,
+          "tls": 14,
+          "firstByte": 20,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/sitemap.xml",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Taipei",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 63,
+          "dns": 13,
+          "tcp": 4,
+          "tls": 18,
+          "firstByte": 28,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/sitemap.xml",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/docs/api",
+    "family": 6,
+    "id": "2R7I757SVQpnF81tG00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3033::6815:96e",
+        "tls_valid": true,
+        "timings": {
+          "total": 33,
+          "dns": 2,
+          "tcp": 2,
+          "tls": 9,
+          "firstByte": 20,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/docs/api",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 63,
+          "dns": 1,
+          "tcp": 12,
+          "tls": 21,
+          "firstByte": 28,
+          "download": 1
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/docs/api",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/.well-known/agent-skills/site-profile/SKILL.md",
+    "family": 6,
+    "id": "2enNfm82MZj0ww9MC00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 36,
+          "dns": 7,
+          "tcp": 3,
+          "tls": 10,
+          "firstByte": 16,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/agent-skills/site-profile/SKILL.md",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 117,
+          "dns": 1,
+          "tcp": 27,
+          "tls": 38,
+          "firstByte": 51,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/agent-skills/site-profile/SKILL.md",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/.well-known/agent-skills/portfolio-catalog/SKILL.md",
+    "family": 6,
+    "id": "2mSkC20suO11ViJBO00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 30,
+          "dns": 3,
+          "tcp": 1,
+          "tls": 11,
+          "firstByte": 15,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/agent-skills/portfolio-catalog/SKILL.md",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 125,
+          "dns": 1,
+          "tcp": 33,
+          "tls": 43,
+          "firstByte": 48,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/agent-skills/portfolio-catalog/SKILL.md",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/.well-known/agent-skills/hiring-brief/SKILL.md",
+    "family": 6,
+    "id": "2xdBDuznt4ubAqjhD00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 34,
+          "dns": 1,
+          "tcp": 2,
+          "tls": 12,
+          "firstByte": 19,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/agent-skills/hiring-brief/SKILL.md",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 301,
+        "error": null,
+        "ip": "2606:4700:3037::ac43:9fc3",
+        "tls_valid": true,
+        "timings": {
+          "total": 113,
+          "dns": 1,
+          "tcp": 25,
+          "tls": 40,
+          "firstByte": 47,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/.well-known/agent-skills/hiring-brief/SKILL.md",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "hickoxyz.fly.dev",
+    "path": "/",
+    "family": 6,
+    "id": "2EYnDQAVRl1lJR7fe00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2a09:8280:1::e8:c523:0",
+        "tls_valid": true,
+        "timings": {
+          "total": 839,
+          "dns": 4,
+          "tcp": 217,
+          "tls": 224,
+          "firstByte": 377,
+          "download": 17
+        },
+        "truncated": true,
+        "location": null,
+        "content_type": "text/html; charset=utf-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 200,
+        "error": null,
+        "ip": "2a09:8280:1::e8:c523:0",
+        "tls_valid": true,
+        "timings": {
+          "total": 89,
+          "dns": 19,
+          "tcp": 19,
+          "tls": 25,
+          "firstByte": 25,
+          "download": 1
+        },
+        "truncated": true,
+        "location": null,
+        "content_type": "text/html; charset=utf-8"
+      }
+    ]
+  },
+  {
+    "host": "hickoxyz.fly.dev",
+    "path": "/llms.txt",
+    "family": 6,
+    "id": "2Atm4UWoyrmNKBrMv00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 200,
+        "error": null,
+        "ip": "2a09:8280:1::e8:c523:0",
+        "tls_valid": true,
+        "timings": {
+          "total": 755,
+          "dns": 1,
+          "tcp": 217,
+          "tls": 226,
+          "firstByte": 296,
+          "download": 15
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Omaha",
+        "status": 200,
+        "error": null,
+        "ip": "2a09:8280:1::e8:c523:0",
+        "tls_valid": true,
+        "timings": {
+          "total": 105,
+          "dns": 16,
+          "tcp": 10,
+          "tls": 27,
+          "firstByte": 52,
+          "download": 0
+        },
+        "truncated": false,
+        "location": null,
+        "content_type": "text/markdown; charset=utf-8"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/",
+    "family": 0,
+    "id": "2znBmbPWePm1Kcx6i00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "172.67.159.195",
+        "tls_valid": null,
+        "timings": {
+          "total": 20,
+          "dns": 1,
+          "tcp": 2,
+          "tls": null,
+          "firstByte": 17,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "104.21.9.110",
+        "tls_valid": null,
+        "timings": {
+          "total": 79,
+          "dns": 40,
+          "tcp": 11,
+          "tls": null,
+          "firstByte": 28,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/llms.txt",
+    "family": 0,
+    "id": "2YrELbcLyiiIkpnWw00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Singapore",
+        "status": 301,
+        "error": null,
+        "ip": "172.67.159.195",
+        "tls_valid": null,
+        "timings": {
+          "total": 45,
+          "dns": 1,
+          "tcp": 1,
+          "tls": null,
+          "firstByte": 43,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/llms.txt",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "104.21.9.110",
+        "tls_valid": null,
+        "timings": {
+          "total": 30,
+          "dns": 2,
+          "tcp": 11,
+          "tls": null,
+          "firstByte": 17,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/llms.txt",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/",
+    "family": 0,
+    "id": "2pKza6hsH2dAkhKUd00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "104.21.9.110",
+        "tls_valid": null,
+        "timings": {
+          "total": 25,
+          "dns": 7,
+          "tcp": 2,
+          "tls": null,
+          "firstByte": 16,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "104.21.9.110",
+        "tls_valid": null,
+        "timings": {
+          "total": 42,
+          "dns": 2,
+          "tcp": 12,
+          "tls": null,
+          "firstByte": 28,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/llms.txt",
+    "family": 0,
+    "id": "2C7NqMKZ156K426UK00021Obm",
+    "status": "finished",
+    "results": [
+      {
+        "network": "Amazon.com",
+        "asn": 16509,
+        "city": "Tokyo",
+        "status": 301,
+        "error": null,
+        "ip": "172.67.159.195",
+        "tls_valid": null,
+        "timings": {
+          "total": 29,
+          "dns": 1,
+          "tcp": 2,
+          "tls": null,
+          "firstByte": 26,
+          "download": 0
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/llms.txt",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      {
+        "network": "Google",
+        "asn": 396982,
+        "city": "Charleston",
+        "status": 301,
+        "error": null,
+        "ip": "172.67.159.195",
+        "tls_valid": null,
+        "timings": {
+          "total": 676,
+          "dns": 41,
+          "tcp": 12,
+          "tls": null,
+          "firstByte": 622,
+          "download": 1
+        },
+        "truncated": false,
+        "location": "https://elihickox.com/llms.txt",
+        "content_type": "text/html; charset=UTF-8"
+      }
+    ]
+  }
+]

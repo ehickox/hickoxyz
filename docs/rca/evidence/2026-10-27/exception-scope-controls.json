@@ -1,0 +1,37 @@
+[
+  {
+    "path": "/llms.txt",
+    "method": "HEAD",
+    "ua": "Python-urllib/3.11",
+    "status": 200,
+    "seconds": 0.404201
+  },
+  {
+    "path": "/api/agent-profile",
+    "method": "HEAD",
+    "ua": "Python-urllib/3.11",
+    "status": 200,
+    "seconds": 0.330192
+  },
+  {
+    "path": "/about",
+    "method": "GET",
+    "ua": "Python-urllib/3.11",
+    "status": 403,
+    "seconds": 0.151742
+  },
+  {
+    "path": "/llms.txt",
+    "method": "POST",
+    "ua": "Python-urllib/3.11",
+    "status": 403,
+    "seconds": 0.09941
+  },
+  {
+    "path": "/llms.txt",
+    "method": "POST",
+    "ua": "curl/8.7.1",
+    "status": 405,
+    "seconds": 0.252259
+  }
+]
