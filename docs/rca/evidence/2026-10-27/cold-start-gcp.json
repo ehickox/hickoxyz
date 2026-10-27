@@ -1,0 +1,93 @@
+{
+  "id": "2ATarIE5QikYLHmUQ00021Obq",
+  "createdAt": "2026-10-27T21:22:40.763Z",
+  "updatedAt": "2026-10-27T21:22:46.065Z",
+  "status": "finished",
+  "target": "elihickox.com",
+  "measurementOptions": {
+    "request": {
+      "method": "GET",
+      "path": "/api/agent-profile"
+    }
+  },
+  "probe": {
+    "continent": "NA",
+    "region": "Northern America",
+    "country": "US",
+    "state": "SC",
+    "city": "Charleston",
+    "asn": 396982,
+    "longitude": -79.97,
+    "latitude": 32.85,
+    "network": "Google",
+    "tags": [
+      "gcp-us-east1",
+      "gcp",
+      "datacenter-network",
+      "u-fundacel"
+    ],
+    "resolvers": [
+      "private"
+    ]
+  },
+  "response": {
+    "statusCode": 200,
+    "resolvedAddress": "104.21.9.110",
+    "timings": {
+      "total": 5136,
+      "dns": 41,
+      "tcp": 12,
+      "tls": 29,
+      "firstByte": 5051,
+      "download": 3
+    },
+    "tls": {
+      "authorized": true,
+      "protocol": "TLSv1.3",
+      "cipherName": "TLS_AES_256_GCM_SHA384",
+      "createdAt": "2026-09-18T21:48:54.000Z",
+      "expiresAt": "2026-12-17T22:48:48.000Z",
+      "issuer": {
+        "C": "US",
+        "O": "Google Trust Services",
+        "CN": "WE1"
+      },
+      "subject": {
+        "CN": "elihickox.com",
+        "alt": "DNS:elihickox.com, DNS:*.elihickox.com"
+      },
+      "keyType": "EC",
+      "keyBits": 256,
+      "serialNumber": "4C:5F:E5:48:6B:99:6A:33:13:1C:E7:EA:8E:17:C8:BE",
+      "fingerprint256": "EC:20:C0:36:70:F0:9F:DA:50:54:E4:0D:74:03:44:25:F7:BA:97:6B:18:6A:08:7F:3A:89:0C:59:CA:FD:48:2A",
+      "publicKey": "04:6D:74:8F:BA:EB:96:22:9E:C7:D7:7F:55:09:FE:EC:54:9E:1F:71:90:F7:CF:48:80:2F:F5:86:72:EC:DF:75:50:CB:FA:EC:CB:4D:AC:24:51:58:19:45:CE:2F:C2:80:DF:87:A7:6E:6A:40:C0:C4:99:02:38:4B:53:25:5D:FC:5A"
+    },
+    "headers": {
+      "date": "Tue, 27 Oct 2026 21:22:45 GMT",
+      "content-type": "application/json",
+      "transfer-encoding": "chunked",
+      "connection": "close",
+      "server": "cloudflare",
+      "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+      "content-encoding": "br",
+      "via": "1.1 fly.io, 1.1 fly.io",
+      "fly-request-id": "01M5ZKWW823MYMC86VP71H2KGN-iad",
+      "cf-cache-status": "DYNAMIC",
+      "vary": "accept-encoding",
+      "strict-transport-security": "max-age=31536000",
+      "x-content-type-options": "nosniff",
+      "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Rz8d4D9k48uXFMzRfd%2BzLtbcMASaEUlTltJR4J6ROznTHGiFOzqCQ%2FfYDEm5uA8PovWYkZYA8%2B2Vmcydm5WiT%2BAtEgkUS%2BgcvCRe3T%2FahHG02eXOzOVDYlfldkBDiERx\"}]}",
+      "cf-ray": "a514c1edbcd1452c-ATL",
+      "alt-svc": "h3=\":443\"; ma=86400"
+    },
+    "truncated": true
+  },
+  "machine_state_before": {
+    "7841395ad64628": "stopped",
+    "2870d15fe1e508": "stopped"
+  },
+  "machine_state_after": {
+    "7841395ad64628": "stopped",
+    "2870d15fe1e508": "started"
+  }
+}

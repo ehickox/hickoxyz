@@ -1,0 +1,74 @@
+[
+  {
+    "host": "elihickox.com",
+    "path": "/llms.txt",
+    "forced_origin_ip": "66.241.125.159",
+    "user_agent": "Python-urllib/3.11",
+    "status": 200,
+    "tls_verify_result": 0,
+    "peer_ip": "66.241.125.159",
+    "ttfb": 5.608225,
+    "total": 5.632013,
+    "exit": 0
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/api/agent-profile",
+    "forced_origin_ip": "66.241.125.159",
+    "user_agent": "Python-urllib/3.11",
+    "status": 200,
+    "tls_verify_result": 0,
+    "peer_ip": "66.241.125.159",
+    "ttfb": 0.711247,
+    "total": 0.784003,
+    "exit": 0
+  },
+  {
+    "host": "elihickox.com",
+    "path": "/openapi.json",
+    "forced_origin_ip": "66.241.125.159",
+    "user_agent": "Python-urllib/3.11",
+    "status": 200,
+    "tls_verify_result": 0,
+    "peer_ip": "66.241.125.159",
+    "ttfb": 0.705294,
+    "total": 0.70535,
+    "exit": 0
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/llms.txt",
+    "forced_origin_ip": "66.241.125.159",
+    "user_agent": "Python-urllib/3.11",
+    "status": 200,
+    "tls_verify_result": 0,
+    "peer_ip": "66.241.125.159",
+    "ttfb": 0.726699,
+    "total": 0.75134,
+    "exit": 0
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/api/agent-profile",
+    "forced_origin_ip": "66.241.125.159",
+    "user_agent": "Python-urllib/3.11",
+    "status": 200,
+    "tls_verify_result": 0,
+    "peer_ip": "66.241.125.159",
+    "ttfb": 0.660037,
+    "total": 0.771286,
+    "exit": 0
+  },
+  {
+    "host": "www.elihickox.com",
+    "path": "/openapi.json",
+    "forced_origin_ip": "66.241.125.159",
+    "user_agent": "Python-urllib/3.11",
+    "status": 200,
+    "tls_verify_result": 0,
+    "peer_ip": "66.241.125.159",
+    "ttfb": 0.431453,
+    "total": 0.431523,
+    "exit": 0
+  }
+]
