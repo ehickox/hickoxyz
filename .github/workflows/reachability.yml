@@ -1,0 +1,42 @@
+name: Reachability
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3,15 * * *"
+  workflow_run:
+    workflows: ["Deploy to Fly.io"]
+    types: [completed]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Check production reachability
+        run: python scripts/check_reachability.py --output reachability.json
+      - name: Upload reachability report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reachability-${{ matrix.os }}
+          path: reachability.json
+          retention-days: 7
+          if-no-files-found: warn
+      - name: Publish actionable summary
+        if: always()
+        run: python scripts/check_reachability.py --summarize reachability.json
