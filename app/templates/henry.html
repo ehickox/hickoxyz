@@ -2,8 +2,8 @@
 
 {% block body %}
 <h1>Give to Henry</h1>
-<p>Henry Hickox</p>
-<p>Choose one account. Either gift goes directly to him.</p>
+<p class="intro">Henry Hickox</p>
+<p class="intro">Choose one account. Either gift goes directly to him.</p>
 
 <div class="gift__grid">
     <h2>529 College Savings</h2>
@@ -16,7 +16,7 @@
             <span data-copy-label>Copy</span>
         </button>
     </p>
-    <p>
+    <p class="photo">
         <a href="{{ ugift_url }}" aria-label="QR code for Henry's 529 on Ugift">
             <img src="{{ static('qr/henry-529.svg') }}" alt="" width="168" height="168">
         </a><br>
@@ -27,7 +27,7 @@
     <h3>Invest for his future</h3>
     <p>Contributions are invested in an index fund of large U.S. companies.</p>
     <p><a href="{{ trump_gift_url }}">Contribute</a></p>
-    <p>
+    <p class="photo">
         <a href="{{ trump_gift_url }}" aria-label="QR code for Henry's Trump Account">
             <img src="{{ static('qr/henry-trump.svg') }}" alt="" width="168" height="168">
         </a><br>

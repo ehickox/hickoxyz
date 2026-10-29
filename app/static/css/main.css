@@ -19,6 +19,20 @@ body {
 
 .page {
   max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page > p,
+h1,
+.intro,
+.photo {
+  text-align: center;
+}
+
+.photo p,
+p.photo {
+  font-size: smaller;
 }
 
 a:link {

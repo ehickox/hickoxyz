@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<div class="intro">
 <h1>Eli Hickox</h1>
 
 <p>
@@ -12,6 +13,7 @@
 <p>{{ site_description }}</p>
 
 <p>A longer account is on the <a href="{{ url_for('about') }}">about</a> page.</p>
+</div>
 
 <h2>Contact</h2>
 <ul>
@@ -34,6 +36,7 @@
     <li><a href="{{ url_for('henry') }}">Give to Henry</a></li>
 </ul>
 
+<div class="photo">
 <h2>Photographs</h2>
 
 <p>
@@ -70,4 +73,5 @@
     <img src="{{ static('img/home5.webp') }}" alt="Cozumel, Mexico"><br>
     Cozumel, Mexico
 </p>
+</div>
 {% endblock %}
