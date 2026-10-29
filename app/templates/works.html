@@ -2,54 +2,36 @@
 
 {% block body %}
 {% if projects == None %}
-<header class="projects-header">
-    <div class="container">
-        <h1 class="projects-header__title">Collected Works</h1>
-        <p class="projects-header__subtitle">Under Construction</p>
-    </div>
-</header>
+<h1>Collected Works</h1>
+<p class="intro">Under Construction</p>
 {% else %}
-<header class="projects-header">
-    <div class="container">
-        <h1 class="projects-header__title">Collected Works</h1>
-        <p class="projects-header__subtitle">Literary works and creative writing</p>
-    </div>
-</header>
+<h1>Collected Works</h1>
+<p class="intro">Literary works and creative writing</p>
 
-<section class="projects-grid">
-    {% for project in projects %}
-    <article class="project-card" id="{{project.title}}">
-        <header class="project-card__header">
-            <h2 class="project-card__title">{{project.title}}</h2>
-        </header>
-        
-        <p class="project-card__date">{{project.date}}</p>
-        
-        <div class="project-card__description">
-            {{project.description|safe}}
-        </div>
-        
-        <div class="project-card__links">
-            {% if project.link %}
-            <a href="{{project.link}}" class="project-card__link" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                Visit
-            </a>
-            {% endif %}
-            
-            {% if project.download %}
-            <a href="{{project.download}}" class="project-card__link">
-                <i class="fas fa-magnet"></i>
-                Download (Torrent)
-            </a>
-            {% endif %}
-        </div>
-        
-        {% if project.copywrite %}
-        <p class="project-card__license">© {{project.copywrite}}</p>
-        {% endif %}
-    </article>
-    {% endfor %}
-</section>
+{% for project in projects %}
+<hr>
+
+<h2 id="{{ project.title }}">{{ project.title }}</h2>
+{% if project.date %}
+<p>{{ project.date }}</p>
+{% endif %}
+
+<div>
+    {{ project.description|safe }}
+</div>
+
+<ul>
+    {% if project.link %}
+    <li><a href="{{ project.link }}" target="_blank">Visit</a></li>
+    {% endif %}
+    {% if project.download %}
+    <li><a href="{{ project.download }}">Download (Torrent)</a></li>
+    {% endif %}
+</ul>
+
+{% if project.copywrite %}
+<p>© {{ project.copywrite }}</p>
+{% endif %}
+{% endfor %}
 {% endif %}
 {% endblock %}
