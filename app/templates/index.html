@@ -1,64 +1,73 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<section class="hero">
-    <div class="container">
-        <span class="hero__eyebrow">Software Architect</span>
-        <h1 class="hero__title">Eli Hickox</h1>
-        <p class="hero__subtitle">Building systems that scale</p>
-        <span class="hero__location">San Francisco Bay Area</span>
-    </div>
-</section>
+<h1>Eli Hickox</h1>
 
-<section class="gallery">
-    <div class="gallery__container">
-        <div class="gallery__slide is-active">
-            <img class="gallery__image" alt="Golden Gate Bridge, San Francisco, CA" src="{{static('img/gg_bridge.webp')}}">
-            <div class="gallery__caption">Golden Gate Bridge, San Francisco, CA</div>
-        </div>
+<p>
+    Software Architect<br>
+    Building systems that scale<br>
+    San Francisco Bay Area
+</p>
 
-        <div class="gallery__slide">
-            <img class="gallery__image" alt="Piazza del Popolo, Rome, Italy" src="{{static('img/home0.webp')}}">
-            <div class="gallery__caption">Piazza del Popolo, Rome, Italy</div>
-        </div>
+<p>{{ site_description }}</p>
 
-        <div class="gallery__slide">
-            <img class="gallery__image" alt="Mission Dolores Park, San Francisco, CA" src="{{static('img/home1.webp')}}">
-            <div class="gallery__caption">Mission Dolores Park, San Francisco, CA</div>
-        </div>
-        
-        <div class="gallery__slide">
-            <img class="gallery__image" alt="Old San Juan, Puerto Rico" src="{{static('img/home2.webp')}}">
-            <div class="gallery__caption">Old San Juan, Puerto Rico</div>
-        </div>
+<p>A longer account is on the <a href="{{ url_for('about') }}">about</a> page.</p>
 
-        <div class="gallery__slide">
-            <img class="gallery__image" alt="Jogyesa, Seoul, South Korea" src="{{static('img/home3.webp')}}">
-            <div class="gallery__caption">Jogyesa, Seoul, South Korea</div>
-        </div>
-        
-        <div class="gallery__slide">
-            <img class="gallery__image" alt="St. George's, Grenada" src="{{static('img/home4.webp')}}">
-            <div class="gallery__caption">St. George's, Grenada</div>
-        </div>
+<h2>Contact</h2>
+<ul>
+    <li>Email: <a href="mailto:eli@elihickox.com">eli@elihickox.com</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/elihickox/">elihickox</a></li>
+    <li>GitHub: <a href="https://github.com/ehickox/">ehickox</a></li>
+    <li>GitLab: <a href="https://gitlab.com/ehickox/">ehickox</a></li>
+    <li>X (Twitter): <a href="https://x.com/elihickox">elihickox</a></li>
+    <li>Ham Radio: <a href="https://elihickox.com/radio">elihickox.com/radio</a></li>
+</ul>
 
-        <div class="gallery__slide">
-            <img class="gallery__image" alt="Cozumel, Mexico" src="{{static('img/home5.webp')}}">
-            <div class="gallery__caption">Cozumel, Mexico</div>
-        </div>
+<h2>On this site</h2>
+<ul>
+    <li><a href="{{ url_for('about') }}">About</a></li>
+    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+    <li><a href="{{ url_for('works') }}">Collected Works</a></li>
+    <li><a href="https://patents.justia.com/inventor/eli-spencer-hickox">Patents</a></li>
+    <li><a href="{{ url_for('blog') }}">Blog</a></li>
+    <li><a href="{{ url_for('docs_api') }}">API Documentation</a></li>
+    <li><a href="{{ url_for('henry') }}">Give to Henry</a></li>
+</ul>
 
-        <button class="gallery__nav gallery__nav--prev" onclick="plusSlides(-1)" aria-label="Previous slide">❮</button>
-        <button class="gallery__nav gallery__nav--next" onclick="plusSlides(1)" aria-label="Next slide">❯</button>
-    </div>
+<h2>Photographs</h2>
 
-    <div class="gallery__dots">
-        <button class="gallery__dot is-active" onclick="currentSlide(1)" aria-label="Go to slide 1"></button>
-        <button class="gallery__dot" onclick="currentSlide(2)" aria-label="Go to slide 2"></button>
-        <button class="gallery__dot" onclick="currentSlide(3)" aria-label="Go to slide 3"></button>
-        <button class="gallery__dot" onclick="currentSlide(4)" aria-label="Go to slide 4"></button>
-        <button class="gallery__dot" onclick="currentSlide(5)" aria-label="Go to slide 5"></button>
-        <button class="gallery__dot" onclick="currentSlide(6)" aria-label="Go to slide 6"></button>
-        <button class="gallery__dot" onclick="currentSlide(7)" aria-label="Go to slide 7"></button>
-    </div>
-</section>
+<p>
+    <img src="{{ static('img/gg_bridge.webp') }}" alt="Golden Gate Bridge, San Francisco, CA"><br>
+    Golden Gate Bridge, San Francisco, CA
+</p>
+
+<p>
+    <img src="{{ static('img/home0.webp') }}" alt="Piazza del Popolo, Rome, Italy"><br>
+    Piazza del Popolo, Rome, Italy
+</p>
+
+<p>
+    <img src="{{ static('img/home1.webp') }}" alt="Mission Dolores Park, San Francisco, CA"><br>
+    Mission Dolores Park, San Francisco, CA
+</p>
+
+<p>
+    <img src="{{ static('img/home2.webp') }}" alt="Old San Juan, Puerto Rico"><br>
+    Old San Juan, Puerto Rico
+</p>
+
+<p>
+    <img src="{{ static('img/home3.webp') }}" alt="Jogyesa, Seoul, South Korea"><br>
+    Jogyesa, Seoul, South Korea
+</p>
+
+<p>
+    <img src="{{ static('img/home4.webp') }}" alt="St. George's, Grenada"><br>
+    St. George's, Grenada
+</p>
+
+<p>
+    <img src="{{ static('img/home5.webp') }}" alt="Cozumel, Mexico"><br>
+    Cozumel, Mexico
+</p>
 {% endblock %}

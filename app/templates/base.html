@@ -45,10 +45,7 @@
       gtag('config', 'G-6PTXW2PLTM');
     </script>
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ static('css/main.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="{{ static('apple-touch-icon-57x57.png') }}">
@@ -65,54 +62,44 @@
     <link rel="icon" type="image/png" href="{{ static('favicon-96x96.png') }}" sizes="96x96">
     <link rel="icon" type="image/png" href="{{ static('favicon-16x16.png') }}" sizes="16x16">
     <link rel="manifest" href="{{ static('manifest.json') }}">
-    <link rel="mask-icon" href="{{ static('safari-pinned-tab.svg') }}" color="#22d3ee">
-    <meta name="msapplication-TileColor" content="#0d0d0f">
+    <link rel="mask-icon" href="{{ static('safari-pinned-tab.svg') }}" color="#000000">
+    <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ static('mstile-144x144.png') }}">
-    <meta name="theme-color" content="#0d0d0f">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="nav__inner">
-            <a href="{{ url_for('index') }}" class="nav__brand">Eli Hickox</a>
-            
-            <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
-                <span class="nav__toggle-bar"></span>
-                <span class="nav__toggle-bar"></span>
-                <span class="nav__toggle-bar"></span>
-            </button>
-            
-            <ul class="nav__menu" id="navMenu">
-                <li><a href="{{ url_for('index') }}" class="nav__link">Home</a></li>
-                <li><a href="{{ url_for('about') }}" class="nav__link">About</a></li>
-                <li><a href="{{ url_for('projects') }}" class="nav__link">Projects</a></li>
-                <li><a href="https://patents.justia.com/inventor/eli-spencer-hickox" class="nav__link" target="_blank">Patents</a></li>
-                <li><a href="{{ url_for('blog')}}" class="nav__link">Blog</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="page">
+        <p>
+            {% if request.endpoint == 'index' %}<strong>Home</strong>{% else %}<a href="{{ url_for('index') }}">Home</a>{% endif %}
+            |
+            {% if request.endpoint == 'about' %}<strong>About</strong>{% else %}<a href="{{ url_for('about') }}">About</a>{% endif %}
+            |
+            {% if request.endpoint == 'projects' %}<strong>Projects</strong>{% else %}<a href="{{ url_for('projects') }}">Projects</a>{% endif %}
+            |
+            {% if request.endpoint == 'works' %}<strong>Works</strong>{% else %}<a href="{{ url_for('works') }}">Works</a>{% endif %}
+            |
+            <a href="https://patents.justia.com/inventor/eli-spencer-hickox">Patents</a>
+            |
+            <a href="{{ url_for('blog') }}">Blog</a>
+            |
+            {% if request.endpoint == 'docs_api' %}<strong>API</strong>{% else %}<a href="{{ url_for('docs_api') }}">API</a>{% endif %}
+        </p>
 
-    <!-- Main Content -->
-    <main>
-        {% block body %}
-        {% endblock %}
-    </main>
+        <hr>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer__content">
-            <p class="footer__text">
-                <a href="mailto:eli@elihickox.com" class="footer__link">eli@elihickox.com</a>
-            </p>
-            <p class="footer__text">
-                Photographs and Website © <a href="https://www.elihickox.com" class="footer__link">Eli Hickox</a> 2015–2026
-            </p>
-        </div>
-    </footer>
+        <main>
+            {% block body %}
+            {% endblock %}
+        </main>
 
-    <!-- Scripts -->
-    <script src="{{ static('js/slideshow.js') }}"></script>
-    <script src="{{ static('js/navbar.js') }}"></script>
-    <script src="{{ static('js/timeline.js') }}"></script>
+        <hr>
+
+        <p>
+            <a href="mailto:eli@elihickox.com">eli@elihickox.com</a>
+        </p>
+        <p>
+            Photographs and Website © <a href="https://www.elihickox.com">Eli Hickox</a> 2015–2026
+        </p>
+    </div>
 </body>
 </html>

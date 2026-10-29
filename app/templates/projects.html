@@ -1,59 +1,42 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<header class="projects-header">
-    <div class="container">
-        <h1 class="projects-header__title">Selected Projects</h1>
-        <p class="projects-header__subtitle">A collection of personal projects, open source contributions, and side experiments</p>
-    </div>
-</header>
+<h1>Selected Projects</h1>
+<p>A collection of personal projects, open source contributions, and side experiments</p>
 
-<section class="projects-grid">
-    {% for project in projects %}
-    <article class="project-card" id="{{project.title}}">
-        <header class="project-card__header">
-            <h2 class="project-card__title">{{project.title}}</h2>
-            <p class="project-card__tagline">{{project.tagline}}</p>
-        </header>
-        
-        <p class="project-card__date">{{project.date}}</p>
-        
-        <div class="project-card__description">
-            {{project.description|safe}}
-        </div>
-        
-        <div class="project-card__links">
-            {% if project.link %}
-            <a href="{{project.link}}" class="project-card__link" target="_blank">
-                <i class="fas fa-external-link-alt"></i>
-                Visit
-            </a>
-            {% endif %}
-            
-            {% if project.download %}
-            <a href="{{project.download}}" class="project-card__link">
-                <i class="fas fa-download"></i>
-                Download
-            </a>
-            {% endif %}
-            
-            {% if project.git_url %}
-            <a href="{{project.git_url}}" class="project-card__link" target="_blank">
-                {% if 'gitlab' in project.git_url.lower() %}
-                <i class="fab fa-gitlab"></i>
-                GitLab
-                {% else %}
-                <i class="fab fa-github"></i>
-                GitHub
-                {% endif %}
-            </a>
-            {% endif %}
-        </div>
-        
-        {% if project.copywrite %}
-        <p class="project-card__license">© {{project.copywrite}}</p>
-        {% endif %}
-    </article>
-    {% endfor %}
-</section>
+{% for project in projects %}
+<hr>
+
+<h2 id="{{ project.title }}">{{ project.title }}</h2>
+{% if project.tagline %}
+<p>{{ project.tagline }}</p>
+{% endif %}
+{% if project.date %}
+<p>{{ project.date }}</p>
+{% endif %}
+
+<div>
+    {{ project.description|safe }}
+</div>
+
+<ul>
+    {% if project.link %}
+    <li><a href="{{ project.link }}" target="_blank">Visit</a></li>
+    {% endif %}
+    {% if project.download %}
+    <li><a href="{{ project.download }}">Download</a></li>
+    {% endif %}
+    {% if project.git_url %}
+    <li>
+        <a href="{{ project.git_url }}" target="_blank">
+            {% if 'gitlab' in project.git_url.lower() %}GitLab{% else %}GitHub{% endif %}
+        </a>
+    </li>
+    {% endif %}
+</ul>
+
+{% if project.copywrite %}
+<p>© {{ project.copywrite }}</p>
+{% endif %}
+{% endfor %}
 {% endblock %}

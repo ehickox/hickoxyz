@@ -1,42 +1,22 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<header class="projects-header">
-    <div class="container">
-        <h1 class="projects-header__title">API Documentation</h1>
-        <p class="projects-header__subtitle">Machine-readable discovery and a small read-only JSON API for agents</p>
-    </div>
-</header>
+<h1>API Documentation</h1>
+<p>Machine-readable discovery and a small read-only JSON API for agents</p>
 
-<section class="projects-grid">
-    <article class="project-card">
-        <header class="project-card__header">
-            <h2 class="project-card__title">Public Endpoints</h2>
-            <p class="project-card__tagline">No authentication required</p>
-        </header>
+<h2>Public Endpoints</h2>
+<p>No authentication required</p>
+<ul>
+    {% for endpoint in public_endpoints %}
+    <li><a href="{{ endpoint.path }}"><code>{{ endpoint.method }} {{ endpoint.path }}</code></a> - {{ endpoint.description }}</li>
+    {% endfor %}
+</ul>
 
-        <div class="project-card__description">
-            <ul>
-                {% for endpoint in public_endpoints %}
-                <li><strong>{{ endpoint.method }} {{ endpoint.path }}</strong> - {{ endpoint.description }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </article>
-
-    <article class="project-card">
-        <header class="project-card__header">
-            <h2 class="project-card__title">Discovery Endpoints</h2>
-            <p class="project-card__tagline">Published for crawlers, agents, and API tooling</p>
-        </header>
-
-        <div class="project-card__description">
-            <ul>
-                {% for endpoint in discovery_endpoints %}
-                <li><code>{{ endpoint }}</code></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </article>
-</section>
+<h2>Discovery Endpoints</h2>
+<p>Published for crawlers, agents, and API tooling</p>
+<ul>
+    {% for endpoint in discovery_endpoints %}
+    <li><a href="{{ endpoint }}"><code>{{ endpoint }}</code></a></li>
+    {% endfor %}
+</ul>
 {% endblock %}
