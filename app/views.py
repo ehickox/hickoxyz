@@ -55,7 +55,7 @@ HOME_DISCOVERY_LINKS = (
     '</.well-known/api-catalog>; rel="api-catalog"',
     '</docs/api>; rel="service-doc"; type="text/html"',
     '</openapi.json>; rel="service-desc"; type="application/openapi+json"',
-    '</llms.txt>; rel="describedby"; type="text/markdown"',
+    '</llms.txt>; rel="describedby"; type="text/plain"',
     '</api/agent-profile>; rel="describedby"; type="application/json"',
     '</.well-known/agent-skills/index.json>; rel="describedby"; type="application/json"',
 )
@@ -931,7 +931,9 @@ def api_root():
 
 @app.route("/llms.txt")
 def llms_txt():
-    return markdown_response(llms_markdown())
+    response = markdown_response(llms_markdown())
+    response.headers["Content-Type"] = "text/plain; charset=utf-8"
+    return response
 
 
 @app.route("/api/agent-profile")
@@ -1027,7 +1029,7 @@ def api_catalog():
                     {"href": absolute_url("/api/profile"), "type": "application/json"},
                     {"href": absolute_url("/api/projects"), "type": "application/json"},
                     {"href": absolute_url("/api/works"), "type": "application/json"},
-                    {"href": absolute_url("/llms.txt"), "type": "text/markdown"},
+                    {"href": absolute_url("/llms.txt"), "type": "text/plain"},
                 ],
                 "service-desc": [
                     {

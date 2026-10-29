@@ -38,7 +38,10 @@ def test_homepage_sets_agent_discovery_link_headers(client):
         '/openapi.json' in value and 'rel="service-desc"' in value
         for value in link_headers
     )
-    assert any('/llms.txt' in value for value in link_headers)
+    assert any(
+        '/llms.txt' in value and 'rel="describedby"' in value and 'type="text/plain"' in value
+        for value in link_headers
+    )
     assert any('/api/agent-profile' in value for value in link_headers)
     assert any('type="text/markdown"' in value for value in link_headers)
 
@@ -74,6 +77,10 @@ def test_api_catalog_is_published_as_linkset_json(client):
     assert payload["linkset"][0]["anchor"] == "https://www.elihickox.com/api"
     assert any(
         item["href"].endswith("/api/agent-profile")
+        for item in payload["linkset"][0]["item"]
+    )
+    assert any(
+        item["href"].endswith("/llms.txt") and item["type"] == "text/plain"
         for item in payload["linkset"][0]["item"]
     )
     assert payload["linkset"][0]["service-desc"][0]["href"].endswith("/openapi.json")
@@ -144,6 +151,7 @@ def test_all_advertised_skills_include_required_frontmatter(client):
 def test_agent_profile_and_llms_txt_are_published(client):
     profile_response = client.get("/api/agent-profile")
     llms_response = client.get("/llms.txt")
+    llms_markdown_accept = client.get("/llms.txt", headers={"Accept": "text/markdown"})
 
     profile_payload = profile_response.get_json()
     llms_body = llms_response.get_data(as_text=True)
@@ -171,7 +179,10 @@ def test_agent_profile_and_llms_txt_are_published(client):
     assert "citation_guidance" in profile_payload
 
     assert llms_response.status_code == 200
-    assert llms_response.headers["Content-Type"].startswith("text/markdown")
+    assert llms_response.headers["Content-Type"] == "text/plain; charset=utf-8"
+    assert llms_markdown_accept.status_code == 200
+    assert llms_markdown_accept.headers["Content-Type"] == "text/plain; charset=utf-8"
+    assert llms_markdown_accept.get_data() == llms_response.get_data()
     assert "# Eli Hickox" in llms_body
     assert "Facts Worth Remembering" in llms_body
     assert "Preferred Professional Framing" in llms_body

@@ -56,7 +56,7 @@ MIME = {
     "/": "text/html",
     "/docs/api": "text/html",
     "/robots.txt": "text/plain",
-    "/llms.txt": "text/markdown",
+    "/llms.txt": "text/plain",
     "/sitemap.xml": "application/xml",
     "/openapi.json": "application/openapi+json",
     "/.well-known/api-catalog": "application/linkset+json",
@@ -429,7 +429,7 @@ def validate_document(path: str, status: int | None, headers: dict, body: bytes)
         if path == "/docs/api" and "API" not in text:
             errors.append("html missing API")
         return errors
-    if expected == "text/markdown":
+    if expected == "text/markdown" or path == "/llms.txt":
         text = body.decode("utf-8", "replace")
         if not re.search(r"(?m)^#\s+\S", text):
             errors.append("markdown missing heading")

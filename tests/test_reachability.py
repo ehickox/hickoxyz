@@ -61,7 +61,9 @@ class Script:
         path = parts.path or "/"
         if path == "/healthz":
             return health(url)
-        if path == "/llms.txt" or path.endswith("/SKILL.md"):
+        if path == "/llms.txt":
+            return hop(url, headers={"content-type": "text/plain"}, body=b"# Eli Hickox\n")
+        if path.endswith("/SKILL.md"):
             return hop(url, headers={"content-type": "text/markdown"}, body=b"# Eli Hickox\n")
         if path == "/robots.txt":
             return hop(url, headers={"content-type": "text/plain"}, body=b"User-agent: *\nAllow: /\n")
@@ -236,6 +238,15 @@ def test_http_upgrade_probe_follows_https_and_rejects_plaintext():
     assert http_request["final_url"].startswith("https://")
     assert report["requests"][0]["ordinal"] == 0
     assert report["ok"]
+
+
+def test_llms_plain_text_keeps_markdown_body_checks():
+    headers = {"content-type": "text/plain; charset=utf-8"}
+    assert reach.validate_document("/llms.txt", 200, headers, b"# Eli Hickox\n") == []
+    missing_heading = reach.validate_document("/llms.txt", 200, headers, b"Eli Hickox\n")
+    assert any("markdown missing heading" in error for error in missing_heading)
+    missing_name = reach.validate_document("/llms.txt", 200, headers, b"# Site guide\n")
+    assert any("markdown missing Eli" in error for error in missing_name)
 
 
 def test_challenge_status_mime_and_network(tmp_path):
